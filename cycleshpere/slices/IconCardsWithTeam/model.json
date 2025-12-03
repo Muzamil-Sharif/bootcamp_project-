@@ -1,0 +1,103 @@
+{
+  "type": "SharedSlice",
+  "id": "icon_cards_with_team",
+  "name": "IconCardsWithTeam",
+  "variations": [
+    {
+      "id": "icon_cards_and_team_grid",
+      "name": "Icon Cards With Team Grid",
+      "description": "Displays a core values section as icon cards, followed by a team member section with profile cards.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "section_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Section Title"
+          }
+        },
+        "section_intro": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Section Intro"
+          }
+        },
+        "icon_cards": {
+          "type": "Group",
+          "config": {
+            "label": "Icon Cards",
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon"
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title"
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description"
+                }
+              }
+            }
+          }
+        },
+        "team_section_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Team Section Title"
+          }
+        },
+        "team_section_intro": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph,strong",
+            "label": "Team Section Intro"
+          }
+        },
+        "team_members": {
+          "type": "Group",
+          "config": {
+            "label": "Team Members",
+            "fields": {
+              "photo": {
+                "type": "Image",
+                "config": {
+                  "label": "Photo"
+                }
+              },
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name"
+                }
+              },
+              "role": {
+                "type": "Text",
+                "config": {
+                  "label": "Role"
+                }
+              },
+              "bio": {
+                "type": "Text",
+                "config": {
+                  "label": "Bio"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

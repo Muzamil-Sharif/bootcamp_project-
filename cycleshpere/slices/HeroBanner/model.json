@@ -1,0 +1,48 @@
+{
+  "type": "SharedSlice",
+  "id": "hero_banner",
+  "name": "HeroBanner",
+  "variations": [
+    {
+      "id": "headline_overlay",
+      "name": "Headline Overlay",
+      "description": "Hero section featuring a headline overlaid on the image background, suitable for strong calls to action.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image"
+          }
+        },
+        "headline": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Headline1",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading1,strong"
+          }
+        },
+        "headline2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Headline2",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "headline_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Headline Background Color"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

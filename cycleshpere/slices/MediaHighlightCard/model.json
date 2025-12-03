@@ -1,0 +1,142 @@
+{
+  "type": "SharedSlice",
+  "id": "media_highlight_card",
+  "name": "MediaHighlightCard",
+  "variations": [
+    {
+      "id": "image_with_highlighted_message",
+      "name": "Image with Highlighted Message",
+      "description": "Features an image, a standout message box for the headline, and supporting description text. Designed for emphasizing key ideas alongside a visual.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "media": {
+          "type": "Image",
+          "config": {
+            "label": "Media Image"
+          }
+        },
+        "highlight_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading3,strong",
+            "label": "Highlight Title"
+          }
+        },
+        "highlight_description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em",
+            "label": "Highlight Description"
+          }
+        },
+        "button": {
+          "type": "Link",
+          "config": {
+            "label": "Button",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "north_east_arrow": {
+          "type": "Image",
+          "config": {
+            "label": "north east arrow",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text_bet_images": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text bet images",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "highlight_box_color": {
+          "type": "Color",
+          "config": {
+            "label": "Highlight Box Color"
+          }
+        },
+        "box_heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Box heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "box_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "box description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "cycle_image": {
+          "type": "Image",
+          "config": {
+            "label": "Cycle Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text": {
+          "type": "Group",
+          "config": {
+            "label": "Text",
+            "repeat": true,
+            "fields": {
+              "number": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Number",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "heading": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Heading",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "line_vector": {
+                "type": "Image",
+                "config": {
+                  "label": "Line vector",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

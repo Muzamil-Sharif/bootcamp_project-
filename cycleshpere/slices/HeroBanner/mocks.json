@@ -1,0 +1,58 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "headline_overlay",
+		"primary": {
+			"background_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+					"width": 6000,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+				"width": 6000,
+				"height": 4000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "plain",
+				"credits": null,
+				"__TYPE__": "ImageContent"
+			},
+			"headline": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Motor"
+						}
+					}
+				]
+			},
+			"headline_background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#c8f961",
+				"type": "Color"
+			},
+			"headline2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Et cillum ut voluptate non. Adipisicing deserunt consequat aliqua sint irure ea reprehenderit non dolor ipsum. Incididunt amet dolor velit culpa consectetur minim ad."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

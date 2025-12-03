@@ -1,0 +1,90 @@
+{
+  "type": "SharedSlice",
+  "id": "feature_card_grid",
+  "name": "FeatureCardGrid",
+  "variations": [
+    {
+      "id": "default_cards",
+      "name": "Default Cards Grid",
+      "description": "Displays a grid of feature or category cards, each with structured content, and an optional section header and call-to-action.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "header_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Section Title"
+          }
+        },
+        "header_description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong",
+            "label": "Section Description"
+          }
+        },
+        "header_cta": {
+          "type": "Link",
+          "config": {
+            "label": "Section Call To Action",
+            "allowText": true,
+            "repeat": false,
+            "select": null
+          }
+        },
+        "feature_cards": {
+          "type": "Group",
+          "config": {
+            "label": "Feature Cards",
+            "fields": {
+              "emblem_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Emblem Image"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading3,strong",
+                  "label": "Card Title"
+                }
+              },
+              "subtitle": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph,strong",
+                  "label": "Card Subtitle"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em",
+                  "label": "Card Description"
+                }
+              },
+              "card_cta": {
+                "type": "Link",
+                "config": {
+                  "label": "Card Call To Action",
+                  "allowText": true,
+                  "repeat": false,
+                  "select": null
+                }
+              },
+              "background_color": {
+                "type": "Color",
+                "config": {
+                  "label": "Card Background Color"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

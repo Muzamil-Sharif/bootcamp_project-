@@ -1,0 +1,92 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading1": {
+				"__TYPE__": "FieldContent",
+				"value": "trail",
+				"type": "Text"
+			},
+			"text_below_heading1": {
+				"__TYPE__": "FieldContent",
+				"value": "correct",
+				"type": "Text"
+			},
+			"cycle_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+					"width": 3344,
+					"height": 2509
+				},
+				"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+				"width": 3344,
+				"height": 2509,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "shallow",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"get_started": {
+				"key": "7fa6a8c3-3466-400a-9255-078f727a5497",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "light"
+				}
+			},
+			"learn_more": {
+				"key": "3ade6a49-ab5e-4b5a-8314-3e04d98e6beb",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "suit"
+				}
+			},
+			"heading_after_cycle_image": {
+				"__TYPE__": "FieldContent",
+				"value": "largest",
+				"type": "Text"
+			},
+			"text_after_heading2": {
+				"__TYPE__": "FieldContent",
+				"value": "corner",
+				"type": "Text"
+			},
+			"cyclists_image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+					"width": 5243,
+					"height": 3495
+				},
+				"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+				"width": 5243,
+				"height": 3495,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "shelf",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

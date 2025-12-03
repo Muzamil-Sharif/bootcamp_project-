@@ -1,0 +1,136 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default_cards",
+		"primary": {
+			"header_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Limited"
+						}
+					}
+				]
+			},
+			"header_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Reprehenderit ullamco id culpa occaecat reprehenderit nulla minim sit sunt proident ea ullamco. Ullamco occaecat magna et dolor culpa id. Consectetur nostrud culpa aliqua ad fugiat culpa ullamco in cillum dolor deserunt ut ea."
+						}
+					}
+				]
+			},
+			"header_cta": {
+				"__TYPE__": "LinkContent",
+				"key": "039974ab-28f9-4473-b837-e2cb28bf6c08",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "behind"
+				}
+			},
+			"feature_cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"emblem_image",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+										"width": 4024,
+										"height": 4024
+									},
+									"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+									"width": 4024,
+									"height": 4024,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "victory"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "heading3",
+											"content": {
+												"text": "Airplane"
+											}
+										}
+									]
+								}
+							],
+							[
+								"subtitle",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Culpa adipisicing id laboris voluptate ut amet non qui laborum ipsum culpa exercitation enim."
+											}
+										}
+									]
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Proident esse aliqua mollit est dolor aliqua deserunt ea enim officia esse."
+											}
+										}
+									]
+								}
+							],
+							[
+								"card_cta",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "964a8148-9be4-41d5-9b07-b6c338db7d01",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev",
+										"text": "element"
+									}
+								}
+							],
+							[
+								"background_color",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "#e412c5",
+									"type": "Color"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

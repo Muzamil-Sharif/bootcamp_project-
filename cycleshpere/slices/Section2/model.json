@@ -1,0 +1,72 @@
+{
+  "id": "section2",
+  "type": "SharedSlice",
+  "name": "Section2",
+  "description": "Section2",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "backside_of_cycle": {
+          "type": "Image",
+          "config": {
+            "label": "Backside of cycle",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "main_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Main text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "sub_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Sub text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "frontside_of_cycle": {
+          "type": "Image",
+          "config": {
+            "label": "Frontside of cycle",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "learn_more": {
+          "type": "Link",
+          "config": {
+            "label": "Learn more",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "north_east_arrow": {
+          "type": "Image",
+          "config": {
+            "label": "north east arrow",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

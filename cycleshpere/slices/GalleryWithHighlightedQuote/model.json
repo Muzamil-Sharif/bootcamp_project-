@@ -1,0 +1,78 @@
+{
+  "type": "SharedSlice",
+  "id": "gallery_with_highlighted_quote",
+  "name": "GalleryWithHighlightedQuote",
+  "variations": [
+    {
+      "id": "default_with_quote",
+      "name": "Gallery with Highlighted Quote",
+      "description": "Displays a responsive image gallery and prominently features a quote or message with an optional call-to-action.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Section Title"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Section Description"
+          }
+        },
+        "gallery_images": {
+          "type": "Group",
+          "config": {
+            "label": "Gallery Images",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image"
+                }
+              }
+            }
+          }
+        },
+        "inverted_commas": {
+          "type": "Image",
+          "config": {
+            "label": "inverted commas",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "highlighted_quote": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong",
+            "label": "Highlighted Quote"
+          }
+        },
+        "cta_button": {
+          "type": "Link",
+          "config": {
+            "label": "Call to Action Button",
+            "allowText": true,
+            "repeat": false,
+            "select": null
+          }
+        },
+        "north_east_arrow": {
+          "type": "Image",
+          "config": {
+            "label": "north east arrow",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading1": {
+          "type": "Text",
+          "config": {
+            "label": "Heading1",
+            "placeholder": ""
+          }
+        },
+        "text_below_heading1": {
+          "type": "Text",
+          "config": {
+            "label": "Text below heading1",
+            "placeholder": ""
+          }
+        },
+        "cycle_image": {
+          "type": "Image",
+          "config": {
+            "label": "Cycle Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "get_started": {
+          "type": "Link",
+          "config": {
+            "label": "Get Started",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "learn_more": {
+          "type": "Link",
+          "config": {
+            "label": "Learn more",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "heading_after_cycle_image": {
+          "type": "Text",
+          "config": {
+            "label": "Heading after cycle image",
+            "placeholder": ""
+          }
+        },
+        "text_after_heading2": {
+          "type": "Text",
+          "config": {
+            "label": "Text after heading2",
+            "placeholder": ""
+          }
+        },
+        "cyclists_image": {
+          "type": "Image",
+          "config": {
+            "label": "Cyclists Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

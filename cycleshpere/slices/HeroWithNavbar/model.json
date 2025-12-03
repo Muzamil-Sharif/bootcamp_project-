@@ -1,0 +1,45 @@
+{
+  "type": "SharedSlice",
+  "id": "hero_with_navbar",
+  "name": "HeroWithNavbar",
+  "variations": [
+    {
+      "id": "with_text_navbar",
+      "name": "With Text and Navbar",
+      "description": "Contains prominent hero image, main heading, subheading, accent text, and navigation links at the top.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "heading1,strong,em",
+            "label": "Title"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "heading2,strong,em",
+            "label": "Subtitle"
+          }
+        },
+        "accent_text": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "heading3,strong,em",
+            "label": "Accent Text"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

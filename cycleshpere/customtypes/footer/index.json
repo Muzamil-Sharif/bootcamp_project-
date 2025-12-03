@@ -1,0 +1,122 @@
+{
+  "format": "custom",
+  "id": "footer",
+  "label": "footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "thankyou_note": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Thankyou note",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "sign_up_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Sign up text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "social_media_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Social media text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "email_address": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Email Address",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "instagram_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Instagram Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "facebook_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Facebook Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "linkedin": {
+        "type": "Image",
+        "config": {
+          "label": "LinkedIn",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "twitter_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Twitter Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "copyright_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Copyright text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "term_and_conditions": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Term and conditions",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "copyright_text_centre": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Copyright text centre",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "arrow_vector": {
+        "type": "Image",
+        "config": {
+          "label": "Arrow vector",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "line_vector": {
+        "type": "Image",
+        "config": {
+          "label": "Line vector",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

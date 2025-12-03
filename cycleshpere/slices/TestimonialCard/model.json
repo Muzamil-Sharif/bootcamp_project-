@@ -1,0 +1,94 @@
+{
+  "type": "SharedSlice",
+  "id": "testimonial_card",
+  "name": "TestimonialCard",
+  "variations": [
+    {
+      "id": "with_photo_and_metadata",
+      "name": "With Photo and Metadata",
+      "description": "Shows a testimonial with photo, name, subtitle/metadata, and a quote. Decorative quote icons may be handled visually, not as fields.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "sub_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "sub heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "cylce_icon": {
+          "type": "Image",
+          "config": {
+            "label": "Cylce Icon",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "author_photo": {
+          "type": "Image",
+          "config": {
+            "label": "Author Photo"
+          }
+        },
+        "author_name": {
+          "type": "Text",
+          "config": {
+            "label": "Author Name"
+          }
+        },
+        "author_subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Author Subtitle/Metadata"
+          }
+        },
+        "starting_comma": {
+          "type": "Image",
+          "config": {
+            "label": "Starting comma",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "quote": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Testimonial Text"
+          }
+        },
+        "ending_comma": {
+          "type": "Image",
+          "config": {
+            "label": "Ending Comma",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

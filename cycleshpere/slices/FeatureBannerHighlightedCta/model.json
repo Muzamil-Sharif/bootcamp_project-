@@ -1,0 +1,72 @@
+{
+  "type": "SharedSlice",
+  "id": "feature_banner_highlighted_cta",
+  "name": "FeatureBannerHighlightedCta",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Full-width feature banner with main image background, textual content overlay (headline, subheadline), prominent CTA with split style, and optional secondary image.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main Image"
+          }
+        },
+        "headline": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1,strong",
+            "label": "Headline"
+          }
+        },
+        "subheadline": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Subheadline"
+          }
+        },
+        "cta_group": {
+          "type": "Group",
+          "config": {
+            "label": "CTA Group",
+            "fields": {
+              "cta_leading_text": {
+                "type": "Text",
+                "config": {
+                  "label": "CTA Leading Text"
+                }
+              },
+              "cta_highlighted_text": {
+                "type": "Text",
+                "config": {
+                  "label": "CTA Highlighted Text"
+                }
+              },
+              "cta_link": {
+                "type": "Link",
+                "config": {
+                  "label": "CTA Link",
+                  "allowText": false,
+                  "repeat": false,
+                  "select": null
+                }
+              }
+            }
+          }
+        },
+        "supporting_image": {
+          "type": "Image",
+          "config": {
+            "label": "Supporting Image"
+          }
+        }
+      }
+    }
+  ]
+}

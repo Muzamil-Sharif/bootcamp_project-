@@ -1,0 +1,115 @@
+{
+  "type": "SharedSlice",
+  "id": "testimonial_highlight",
+  "name": "TestimonialHighlight",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Displays two user profiles (left and right) and a central testimonial quote, each with optional images and titles. Useful for emphasizing customer feedback with supporting author information.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "testimonials": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Testimonials",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "profiles": {
+          "type": "Group",
+          "config": {
+            "label": "Profiles",
+            "fields": {
+              "avatar": {
+                "type": "Image",
+                "config": {
+                  "label": "Avatar"
+                }
+              },
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name"
+                }
+              },
+              "caption": {
+                "type": "Text",
+                "config": {
+                  "label": "Caption"
+                }
+              }
+            }
+          }
+        },
+        "starting_comma": {
+          "type": "Image",
+          "config": {
+            "label": "Starting comma",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "quote": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Quote",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "ending_comma": {
+          "type": "Image",
+          "config": {
+            "label": "Ending Comma",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "ready_heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Ready heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "button": {
+          "type": "Link",
+          "config": {
+            "label": "Button",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "north_east_arrow": {
+          "type": "Image",
+          "config": {
+            "label": "north east arrow",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
