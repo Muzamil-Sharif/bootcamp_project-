@@ -1,0 +1,83 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "form_with_side_image",
+		"primary": {
+			"form_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Connected"
+						}
+					}
+				]
+			},
+			"form_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Duis consequat sunt proident commodo qui velit qui Lorem deserunt sunt qui mollit pariatur velit. Sint cillum amet ut incididunt."
+						}
+					}
+				]
+			},
+			"first_name_label": {
+				"__TYPE__": "FieldContent",
+				"value": "happened",
+				"type": "Text"
+			},
+			"last_name_label": {
+				"__TYPE__": "FieldContent",
+				"value": "myself",
+				"type": "Text"
+			},
+			"email_label": {
+				"__TYPE__": "FieldContent",
+				"value": "circus",
+				"type": "Text"
+			},
+			"message_label": {
+				"__TYPE__": "FieldContent",
+				"value": "push",
+				"type": "Text"
+			},
+			"submit_button_label": {
+				"__TYPE__": "FieldContent",
+				"value": "hay",
+				"type": "Text"
+			},
+			"side_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+					"width": 3560,
+					"height": 5340
+				},
+				"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+				"width": 3560,
+				"height": 5340,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "catch",
+				"credits": null,
+				"__TYPE__": "ImageContent"
+			},
+			"name_label": {
+				"__TYPE__": "FieldContent",
+				"value": "electric",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

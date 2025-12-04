@@ -1,0 +1,40 @@
+{
+  "type": "SharedSlice",
+  "id": "spacer",
+  "name": "Spacer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "A spacer of customizable height or size.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "cycle_image": {
+          "type": "Image",
+          "config": {
+            "label": "Cycle Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

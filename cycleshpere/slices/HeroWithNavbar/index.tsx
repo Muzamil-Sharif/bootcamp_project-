@@ -19,13 +19,13 @@ const HeroWithNavbar: FC<HeroWithNavbarProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="relative w-full h-[800px] md:h-[900px] lg:h-[1000px] flex items-center justify-center overflow-visible"
+      className="relative w-full h-[600px] md:h-[750px] lg:h-[900px] xl:h-[1000px] flex items-center justify-center overflow-visible"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <PrismicNextImage
           field={slice.primary.background_image}
-          className="w-full h-full min-h-[750px] xl:h-[1057px] object-cover object-center"
+          className="w-full h-full min-h-[600px] md:min-h-[750px] lg:min-h-[900px] xl:h-[1057px] object-cover object-center"
           priority
         />
         {/* Overlay for better text readability */}
@@ -33,20 +33,20 @@ const HeroWithNavbar: FC<HeroWithNavbarProps> = ({ slice }) => {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 max-w-[1440px] w-full mx-auto px-8 md:px-12 lg:px-16 flex items-center h-full">
-        <div className="flex flex-col gap-2 xl:-mx-8 md:gap-3 max-w-2xl">
+      <div className="relative z-10 max-w-[1440px] w-full mx-auto px-4 md:px-8 lg:px-12 xl:px-16 flex items-center h-full">
+        <div className="flex flex-col gap-1 md:gap-2 xl:gap-2 xl:-mx-8 max-w-full md:max-w-2xl">
           {/* Title */}
-          <div className="text-4xl md:text-6xl lg:text-[80px] font-bold text-white uppercase leading-tight tracking-wide drop-shadow-lg">
+          <div className="text-3xl md:text-5xl lg:text-6xl xl:text-[80px] font-bold text-white uppercase leading-tight tracking-wide drop-shadow-lg">
             <PrismicRichText field={slice.primary.title} />
           </div>
 
           {/* Subtitle */}
-          <div className="text-4xl md:text-6xl lg:text-[80px] xl:w-[788.55px] xl:mx-3 font-bold text-white uppercase leading-tight tracking-wide drop-shadow-lg">
+          <div className="text-3xl md:text-5xl lg:text-6xl xl:text-[80px] w-full md:w-auto xl:w-[788.55px] xl:mx-3 font-bold text-white uppercase leading-tight tracking-wide drop-shadow-lg">
             <PrismicRichText field={slice.primary.subtitle} />
           </div>
 
           {/* Accent Text */}
-          <div className="text-4xl md:text-6xl lg:text-[80px] xl:text-[90px] xl:mx-6 font-bold text-[#D4FF70] uppercase leading-tight tracking-wide drop-shadow-lg mt-2">
+          <div className="text-3xl md:text-5xl lg:text-6xl xl:text-[90px] xl:mx-6 font-bold text-[#D4FF70] uppercase leading-tight tracking-wide drop-shadow-lg mt-1 md:mt-2">
             <PrismicRichText field={slice.primary.accent_text} />
           </div>
         </div>

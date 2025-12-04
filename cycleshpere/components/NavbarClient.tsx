@@ -57,14 +57,13 @@ export default function NavbarClient({ data }: NavbarClientProps) {
         navClass =
             "fixed z-50 top-0 w-full transition-all duration-300";
 
-        navClass += scrolled
-            ? " bg-[#F3F3F3] shadow-sm backdrop-blur-md"
-            : " bg-transparent";
+        // Always show gray background for contact page
+        navClass += " bg-[#D9D9D9]";
 
         containerClass =
             "max-w-[1440px] mx-auto flex items-center justify-between px-6 md:px-12 lg:px-16 py-6";
 
-        textColorClass = "text-[#000000]";
+        textColorClass = "text-black";
     }
 
     /* -------------------- Simple Transparent Pages -------------------- */

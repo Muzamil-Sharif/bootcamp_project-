@@ -371,6 +371,8 @@ export type NavbarDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | SpacerSlice
+  | ContactFormImageSideSlice
   | FeatureBannerHighlightedCtaSlice
   | GalleryWithHighlightedQuoteSlice
   | TestimonialCardSlice
@@ -602,6 +604,133 @@ type CategoryCardsGridSliceVariation = CategoryCardsGridSliceDefault;
 export type CategoryCardsGridSlice = prismic.SharedSlice<
   "category_cards_grid",
   CategoryCardsGridSliceVariation
+>;
+
+/**
+ * Primary content in *ContactFormImageSide → Form with Side Image → Primary*
+ */
+export interface ContactFormImageSideSliceFormWithSideImagePrimary {
+  /**
+   * Form Title field in *ContactFormImageSide → Form with Side Image → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form_image_side.form_with_side_image.primary.form_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  form_title: prismic.RichTextField;
+
+  /**
+   * Form Description field in *ContactFormImageSide → Form with Side Image → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form_image_side.form_with_side_image.primary.form_description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  form_description: prismic.RichTextField;
+
+  /**
+   * Name label field in *ContactFormImageSide → Form with Side Image → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form_image_side.form_with_side_image.primary.name_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name_label: prismic.KeyTextField;
+
+  /**
+   * First Name Label field in *ContactFormImageSide → Form with Side Image → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form_image_side.form_with_side_image.primary.first_name_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  first_name_label: prismic.KeyTextField;
+
+  /**
+   * Last Name Label field in *ContactFormImageSide → Form with Side Image → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form_image_side.form_with_side_image.primary.last_name_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  last_name_label: prismic.KeyTextField;
+
+  /**
+   * Email Label field in *ContactFormImageSide → Form with Side Image → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form_image_side.form_with_side_image.primary.email_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  email_label: prismic.KeyTextField;
+
+  /**
+   * Message Label field in *ContactFormImageSide → Form with Side Image → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form_image_side.form_with_side_image.primary.message_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  message_label: prismic.KeyTextField;
+
+  /**
+   * Submit Button Label field in *ContactFormImageSide → Form with Side Image → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form_image_side.form_with_side_image.primary.submit_button_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  submit_button_label: prismic.KeyTextField;
+
+  /**
+   * Side Image field in *ContactFormImageSide → Form with Side Image → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form_image_side.form_with_side_image.primary.side_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  side_image: prismic.ImageField<never>;
+}
+
+/**
+ * Form with Side Image variation for ContactFormImageSide Slice
+ *
+ * - **API ID**: `form_with_side_image`
+ * - **Description**: This variation presents a contact form alongside a visually highlighted image, ideal for layouts where imagery is as important as the form itself.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ContactFormImageSideSliceFormWithSideImage =
+  prismic.SharedSliceVariation<
+    "form_with_side_image",
+    Simplify<ContactFormImageSideSliceFormWithSideImagePrimary>,
+    never
+  >;
+
+/**
+ * Slice variation for *ContactFormImageSide*
+ */
+type ContactFormImageSideSliceVariation =
+  ContactFormImageSideSliceFormWithSideImage;
+
+/**
+ * ContactFormImageSide Shared Slice
+ *
+ * - **API ID**: `contact_form_image_side`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ContactFormImageSideSlice = prismic.SharedSlice<
+  "contact_form_image_side",
+  ContactFormImageSideSliceVariation
 >;
 
 /**
@@ -1955,6 +2084,68 @@ export type Section7Slice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Spacer → Default → Primary*
+ */
+export interface SpacerSliceDefaultPrimary {
+  /**
+   * Cycle Image field in *Spacer → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: spacer.default.primary.cycle_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  cycle_image: prismic.ImageField<never>;
+
+  /**
+   * Heading field in *Spacer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: spacer.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *Spacer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: spacer.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  description: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Spacer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: A spacer of customizable height or size.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SpacerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SpacerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Spacer*
+ */
+type SpacerSliceVariation = SpacerSliceDefault;
+
+/**
+ * Spacer Shared Slice
+ *
+ * - **API ID**: `spacer`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SpacerSlice = prismic.SharedSlice<"spacer", SpacerSliceVariation>;
+
+/**
  * Primary content in *StartJourney → Default → Primary*
  */
 export interface StartJourneySliceDefaultPrimary {
@@ -2371,6 +2562,10 @@ declare module "@prismicio/client" {
       CategoryCardsGridSliceDefaultPrimary,
       CategoryCardsGridSliceVariation,
       CategoryCardsGridSliceDefault,
+      ContactFormImageSideSlice,
+      ContactFormImageSideSliceFormWithSideImagePrimary,
+      ContactFormImageSideSliceVariation,
+      ContactFormImageSideSliceFormWithSideImage,
       CtaImageCardSlice,
       CtaImageCardSliceDefaultPrimary,
       CtaImageCardSliceVariation,
@@ -2421,6 +2616,10 @@ declare module "@prismicio/client" {
       Section7SliceDefaultPrimary,
       Section7SliceVariation,
       Section7SliceDefault,
+      SpacerSlice,
+      SpacerSliceDefaultPrimary,
+      SpacerSliceVariation,
+      SpacerSliceDefault,
       StartJourneySlice,
       StartJourneySliceDefaultPrimary,
       StartJourneySliceVariation,

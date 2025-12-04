@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 
 export const components = {
   category_cards_grid: dynamic(() => import("./CategoryCardsGrid")),
+  contact_form_image_side: dynamic(() => import("./ContactFormImageSide")),
   cta_image_card: dynamic(() => import("./CtaImageCard")),
   feature_banner_highlighted_cta: dynamic(
     () => import("./FeatureBannerHighlightedCta"),
@@ -19,6 +20,7 @@ export const components = {
   media_highlight_card: dynamic(() => import("./MediaHighlightCard")),
   section2: dynamic(() => import("./Section2")),
   section7: dynamic(() => import("./Section7")),
+  spacer: dynamic(() => import("./Spacer")),
   start_journey: dynamic(() => import("./StartJourney")),
   testimonial_card: dynamic(() => import("./TestimonialCard")),
   testimonial_highlight: dynamic(() => import("./TestimonialHighlight")),

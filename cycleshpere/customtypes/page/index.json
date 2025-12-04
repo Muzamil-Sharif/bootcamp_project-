@@ -9,7 +9,7 @@
       "uid": {
         "type": "UID",
         "config": {
-          "label": "join"
+          "label": "contact-us"
         }
       },
       "slices": {
@@ -17,6 +17,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "spacer": {
+              "type": "SharedSlice"
+            },
+            "contact_form_image_side": {
+              "type": "SharedSlice"
+            },
             "feature_banner_highlighted_cta": {
               "type": "SharedSlice"
             },

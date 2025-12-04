@@ -1,0 +1,75 @@
+{
+  "type": "SharedSlice",
+  "id": "contact_form_image_side",
+  "name": "ContactFormImageSide",
+  "variations": [
+    {
+      "id": "form_with_side_image",
+      "name": "Form with Side Image",
+      "description": "This variation presents a contact form alongside a visually highlighted image, ideal for layouts where imagery is as important as the form itself.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "form_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Form Title"
+          }
+        },
+        "form_description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Form Description"
+          }
+        },
+        "name_label": {
+          "type": "Text",
+          "config": {
+            "label": "Name label",
+            "placeholder": ""
+          }
+        },
+        "first_name_label": {
+          "type": "Text",
+          "config": {
+            "label": "First Name Label"
+          }
+        },
+        "last_name_label": {
+          "type": "Text",
+          "config": {
+            "label": "Last Name Label"
+          }
+        },
+        "email_label": {
+          "type": "Text",
+          "config": {
+            "label": "Email Label"
+          }
+        },
+        "message_label": {
+          "type": "Text",
+          "config": {
+            "label": "Message Label"
+          }
+        },
+        "submit_button_label": {
+          "type": "Text",
+          "config": {
+            "label": "Submit Button Label"
+          }
+        },
+        "side_image": {
+          "type": "Image",
+          "config": {
+            "label": "Side Image"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
