@@ -18,6 +18,7 @@ export const components = {
   hero_with_navbar: dynamic(() => import("./HeroWithNavbar")),
   icon_cards_with_team: dynamic(() => import("./IconCardsWithTeam")),
   media_highlight_card: dynamic(() => import("./MediaHighlightCard")),
+  news_feed_highlighted: dynamic(() => import("./NewsFeedHighlighted")),
   section2: dynamic(() => import("./Section2")),
   section7: dynamic(() => import("./Section7")),
   spacer: dynamic(() => import("./Spacer")),

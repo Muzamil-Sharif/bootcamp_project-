@@ -1,0 +1,67 @@
+{
+  "type": "SharedSlice",
+  "id": "news_feed_highlighted",
+  "name": "NewsFeedHighlighted",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Default variation with heading on the left and vertical news feed with image, metadata, and title on the right.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "heading1",
+            "label": "Heading"
+          }
+        },
+        "cyclist": {
+          "type": "Image",
+          "config": {
+            "label": "Cyclist",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "today": {
+          "type": "Text",
+          "config": {
+            "label": "Today",
+            "placeholder": ""
+          }
+        },
+        "news_items": {
+          "type": "Group",
+          "config": {
+            "label": "News Items",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image"
+                }
+              },
+              "meta": {
+                "type": "Text",
+                "config": {
+                  "label": "Metadata"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "label": "Title/Description"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -371,6 +371,7 @@ export type NavbarDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | NewsFeedHighlightedSlice
   | SpacerSlice
   | ContactFormImageSideSlice
   | FeatureBannerHighlightedCtaSlice
@@ -1918,6 +1919,118 @@ export type MediaHighlightCardSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *NewsFeedHighlighted → Default → Primary → News Items*
+ */
+export interface NewsFeedHighlightedSliceDefaultPrimaryNewsItemsItem {
+  /**
+   * Image field in *NewsFeedHighlighted → Default → Primary → News Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_feed_highlighted.default.primary.news_items[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Metadata field in *NewsFeedHighlighted → Default → Primary → News Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_feed_highlighted.default.primary.news_items[].meta
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta: prismic.KeyTextField;
+
+  /**
+   * Title/Description field in *NewsFeedHighlighted → Default → Primary → News Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_feed_highlighted.default.primary.news_items[].title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *NewsFeedHighlighted → Default → Primary*
+ */
+export interface NewsFeedHighlightedSliceDefaultPrimary {
+  /**
+   * Heading field in *NewsFeedHighlighted → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_feed_highlighted.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Cyclist field in *NewsFeedHighlighted → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_feed_highlighted.default.primary.cyclist
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  cyclist: prismic.ImageField<never>;
+
+  /**
+   * Today field in *NewsFeedHighlighted → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_feed_highlighted.default.primary.today
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  today: prismic.KeyTextField;
+
+  /**
+   * News Items field in *NewsFeedHighlighted → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_feed_highlighted.default.primary.news_items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  news_items: prismic.GroupField<
+    Simplify<NewsFeedHighlightedSliceDefaultPrimaryNewsItemsItem>
+  >;
+}
+
+/**
+ * Default variation for NewsFeedHighlighted Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default variation with heading on the left and vertical news feed with image, metadata, and title on the right.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type NewsFeedHighlightedSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<NewsFeedHighlightedSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *NewsFeedHighlighted*
+ */
+type NewsFeedHighlightedSliceVariation = NewsFeedHighlightedSliceDefault;
+
+/**
+ * NewsFeedHighlighted Shared Slice
+ *
+ * - **API ID**: `news_feed_highlighted`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type NewsFeedHighlightedSlice = prismic.SharedSlice<
+  "news_feed_highlighted",
+  NewsFeedHighlightedSliceVariation
+>;
+
+/**
  * Primary content in *Section2 → Default → Primary*
  */
 export interface Section2SliceDefaultPrimary {
@@ -2608,6 +2721,11 @@ declare module "@prismicio/client" {
       MediaHighlightCardSliceImageWithHighlightedMessagePrimary,
       MediaHighlightCardSliceVariation,
       MediaHighlightCardSliceImageWithHighlightedMessage,
+      NewsFeedHighlightedSlice,
+      NewsFeedHighlightedSliceDefaultPrimaryNewsItemsItem,
+      NewsFeedHighlightedSliceDefaultPrimary,
+      NewsFeedHighlightedSliceVariation,
+      NewsFeedHighlightedSliceDefault,
       Section2Slice,
       Section2SliceDefaultPrimary,
       Section2SliceVariation,
