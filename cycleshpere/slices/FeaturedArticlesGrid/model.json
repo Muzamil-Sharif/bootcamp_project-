@@ -1,0 +1,81 @@
+{
+  "type": "SharedSlice",
+  "id": "featured_articles_grid",
+  "name": "FeaturedArticlesGrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "A standard grid layout for featured articles with author, date, tag, and summary, plus pagination.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title"
+          }
+        },
+        "articles": {
+          "type": "Group",
+          "config": {
+            "label": "Articles",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Article Image"
+                }
+              },
+              "category_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Category Label"
+                }
+              },
+              "author_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Author Name"
+                }
+              },
+              "author_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Author Image"
+                }
+              },
+              "date": {
+                "type": "Text",
+                "config": {
+                  "label": "Date",
+                  "placeholder": ""
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Article Title"
+                }
+              },
+              "summary": {
+                "type": "Text",
+                "config": {
+                  "label": "Article Summary"
+                }
+              }
+            }
+          }
+        },
+        "pagination": {
+          "type": "Boolean",
+          "config": {
+            "label": "Enable Pagination"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

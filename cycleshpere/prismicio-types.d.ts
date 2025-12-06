@@ -371,6 +371,10 @@ export type NavbarDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | NewsletterOptinSlice
+  | FeaturedArticlesGridSlice
+  | MediaFeedAndLeaderboardSlice
+  | NewsHighlightSplitSlice
   | NewsFeedHighlightedSlice
   | SpacerSlice
   | ContactFormImageSideSlice
@@ -1140,6 +1144,148 @@ export type FeatureCardGridSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *FeaturedArticlesGrid → Default → Primary → Articles*
+ */
+export interface FeaturedArticlesGridSliceDefaultPrimaryArticlesItem {
+  /**
+   * Article Image field in *FeaturedArticlesGrid → Default → Primary → Articles*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid.default.primary.articles[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Category Label field in *FeaturedArticlesGrid → Default → Primary → Articles*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid.default.primary.articles[].category_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  category_label: prismic.KeyTextField;
+
+  /**
+   * Author Name field in *FeaturedArticlesGrid → Default → Primary → Articles*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid.default.primary.articles[].author_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  author_name: prismic.KeyTextField;
+
+  /**
+   * Author Image field in *FeaturedArticlesGrid → Default → Primary → Articles*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid.default.primary.articles[].author_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  author_image: prismic.ImageField<never>;
+
+  /**
+   * Date field in *FeaturedArticlesGrid → Default → Primary → Articles*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid.default.primary.articles[].date
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  date: prismic.KeyTextField;
+
+  /**
+   * Article Title field in *FeaturedArticlesGrid → Default → Primary → Articles*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid.default.primary.articles[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Article Summary field in *FeaturedArticlesGrid → Default → Primary → Articles*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid.default.primary.articles[].summary
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  summary: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *FeaturedArticlesGrid → Default → Primary*
+ */
+export interface FeaturedArticlesGridSliceDefaultPrimary {
+  /**
+   * Section Title field in *FeaturedArticlesGrid → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid.default.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  section_title: prismic.KeyTextField;
+
+  /**
+   * Articles field in *FeaturedArticlesGrid → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid.default.primary.articles[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  articles: prismic.GroupField<
+    Simplify<FeaturedArticlesGridSliceDefaultPrimaryArticlesItem>
+  >;
+
+  /**
+   * Enable Pagination field in *FeaturedArticlesGrid → Default → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid.default.primary.pagination
+   * - **Documentation**: https://prismic.io/docs/fields/boolean
+   */
+  pagination: prismic.BooleanField;
+}
+
+/**
+ * Default variation for FeaturedArticlesGrid Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: A standard grid layout for featured articles with author, date, tag, and summary, plus pagination.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeaturedArticlesGridSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FeaturedArticlesGridSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FeaturedArticlesGrid*
+ */
+type FeaturedArticlesGridSliceVariation = FeaturedArticlesGridSliceDefault;
+
+/**
+ * FeaturedArticlesGrid Shared Slice
+ *
+ * - **API ID**: `featured_articles_grid`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeaturedArticlesGridSlice = prismic.SharedSlice<
+  "featured_articles_grid",
+  FeaturedArticlesGridSliceVariation
+>;
+
+/**
  * Item in *GalleryWithHighlightedQuote → Gallery with Highlighted Quote → Primary → Gallery Images*
  */
 export interface GalleryWithHighlightedQuoteSliceDefaultWithQuotePrimaryGalleryImagesItem {
@@ -1725,6 +1871,354 @@ export type IconCardsWithTeamSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Featured News*
+ */
+export interface MediaFeedAndLeaderboardSliceMediaGridWithTablePrimaryFeaturedNewsItem {
+  /**
+   * Image field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Featured News*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.featured_news[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Label field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Featured News*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.featured_news[].label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Title field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Featured News*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.featured_news[].title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Item in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → News List*
+ */
+export interface MediaFeedAndLeaderboardSliceMediaGridWithTablePrimaryNewsListItem {
+  /**
+   * Thumbnail field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → News List*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.news_list[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Meta (Hashtag, Date) field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → News List*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.news_list[].meta
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta: prismic.KeyTextField;
+
+  /**
+   * Title field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → News List*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.news_list[].title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Item in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+ */
+export interface MediaFeedAndLeaderboardSliceMediaGridWithTablePrimaryTableRowsItem {
+  /**
+   * Club heading field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].club_heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  club_heading: prismic.KeyTextField;
+
+  /**
+   * Rank field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].rank
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  rank: prismic.NumberField;
+
+  /**
+   * Club Logo field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].logo
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Club Name field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].club_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  club_name: prismic.KeyTextField;
+
+  /**
+   * GP heading field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].gp_heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  gp_heading: prismic.KeyTextField;
+
+  /**
+   * Games Played field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].gp
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  gp: prismic.NumberField;
+
+  /**
+   * Wins heading field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].wins_heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  wins_heading: prismic.KeyTextField;
+
+  /**
+   * Wins field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].w
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  w: prismic.NumberField;
+
+  /**
+   * Draw heading field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].draw_heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  draw_heading: prismic.KeyTextField;
+
+  /**
+   * Draws field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].d
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  d: prismic.NumberField;
+
+  /**
+   * losses heading field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].losses_heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  losses_heading: prismic.KeyTextField;
+
+  /**
+   * Losses field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].l
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  l: prismic.NumberField;
+
+  /**
+   * Goals for heading field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].goals_for_heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  goals_for_heading: prismic.KeyTextField;
+
+  /**
+   * Goals For field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].f
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  f: prismic.NumberField;
+
+  /**
+   * goal against heading field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].goal_against_heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  goal_against_heading: prismic.KeyTextField;
+
+  /**
+   * Goals Against field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].a
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  a: prismic.NumberField;
+
+  /**
+   * goal difference heading field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].goal_difference_heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  goal_difference_heading: prismic.KeyTextField;
+
+  /**
+   * Goal Difference field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary → Leaderboard Rows*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[].gd
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  gd: prismic.NumberField;
+}
+
+/**
+ * Primary content in *MediaFeedAndLeaderboard → Media Grid with Table → Primary*
+ */
+export interface MediaFeedAndLeaderboardSliceMediaGridWithTablePrimary {
+  /**
+   * Featured News field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.featured_news[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  featured_news: prismic.GroupField<
+    Simplify<MediaFeedAndLeaderboardSliceMediaGridWithTablePrimaryFeaturedNewsItem>
+  >;
+
+  /**
+   * News List field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.news_list[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  news_list: prismic.GroupField<
+    Simplify<MediaFeedAndLeaderboardSliceMediaGridWithTablePrimaryNewsListItem>
+  >;
+
+  /**
+   * Leaderboard Rows field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.table_rows[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  table_rows: prismic.GroupField<
+    Simplify<MediaFeedAndLeaderboardSliceMediaGridWithTablePrimaryTableRowsItem>
+  >;
+
+  /**
+   * Recent news field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.recent_news
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  recent_news: prismic.KeyTextField;
+
+  /**
+   * Club Ranking field in *MediaFeedAndLeaderboard → Media Grid with Table → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: media_feed_and_leaderboard.media_grid_with_table.primary.club_ranking
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  club_ranking: prismic.KeyTextField;
+}
+
+/**
+ * Media Grid with Table variation for MediaFeedAndLeaderboard Slice
+ *
+ * - **API ID**: `media_grid_with_table`
+ * - **Description**: Layout with a featured news card, a vertical list of secondary news items, and a leaderboard table with club rankings and stats.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MediaFeedAndLeaderboardSliceMediaGridWithTable =
+  prismic.SharedSliceVariation<
+    "media_grid_with_table",
+    Simplify<MediaFeedAndLeaderboardSliceMediaGridWithTablePrimary>,
+    never
+  >;
+
+/**
+ * Slice variation for *MediaFeedAndLeaderboard*
+ */
+type MediaFeedAndLeaderboardSliceVariation =
+  MediaFeedAndLeaderboardSliceMediaGridWithTable;
+
+/**
+ * MediaFeedAndLeaderboard Shared Slice
+ *
+ * - **API ID**: `media_feed_and_leaderboard`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MediaFeedAndLeaderboardSlice = prismic.SharedSlice<
+  "media_feed_and_leaderboard",
+  MediaFeedAndLeaderboardSliceVariation
+>;
+
+/**
  * Item in *MediaHighlightCard → Image with Highlighted Message → Primary → Text*
  */
 export interface MediaHighlightCardSliceImageWithHighlightedMessagePrimaryTextItem {
@@ -2028,6 +2522,261 @@ type NewsFeedHighlightedSliceVariation = NewsFeedHighlightedSliceDefault;
 export type NewsFeedHighlightedSlice = prismic.SharedSlice<
   "news_feed_highlighted",
   NewsFeedHighlightedSliceVariation
+>;
+
+/**
+ * Item in *NewsHighlightSplit → With Featured Highlight → Primary → News Items*
+ */
+export interface NewsHighlightSplitSliceWithFeaturedHighlightPrimaryNewsItemsItem {
+  /**
+   * Thumbnail field in *NewsHighlightSplit → With Featured Highlight → Primary → News Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.news_items[].thumbnail
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  thumbnail: prismic.ImageField<never>;
+
+  /**
+   * Author field in *NewsHighlightSplit → With Featured Highlight → Primary → News Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.news_items[].author
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  author: prismic.KeyTextField;
+
+  /**
+   * Date field in *NewsHighlightSplit → With Featured Highlight → Primary → News Items*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.news_items[].date
+   * - **Documentation**: https://prismic.io/docs/fields/date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Headline field in *NewsHighlightSplit → With Featured Highlight → Primary → News Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.news_items[].headline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  headline: prismic.KeyTextField;
+
+  /**
+   * Summary field in *NewsHighlightSplit → With Featured Highlight → Primary → News Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.news_items[].summary
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  summary: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *NewsHighlightSplit → With Featured Highlight → Primary*
+ */
+export interface NewsHighlightSplitSliceWithFeaturedHighlightPrimary {
+  /**
+   * News Section Title field in *NewsHighlightSplit → With Featured Highlight → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.news_section_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  news_section_title: prismic.RichTextField;
+
+  /**
+   * News Items field in *NewsHighlightSplit → With Featured Highlight → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.news_items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  news_items: prismic.GroupField<
+    Simplify<NewsHighlightSplitSliceWithFeaturedHighlightPrimaryNewsItemsItem>
+  >;
+
+  /**
+   * Featured Background field in *NewsHighlightSplit → With Featured Highlight → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.featured_background
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  featured_background: prismic.ImageField<never>;
+
+  /**
+   * Featured Tag field in *NewsHighlightSplit → With Featured Highlight → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.featured_tag
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  featured_tag: prismic.KeyTextField;
+
+  /**
+   * Featured Author field in *NewsHighlightSplit → With Featured Highlight → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.featured_author
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  featured_author: prismic.KeyTextField;
+
+  /**
+   * Featured Date field in *NewsHighlightSplit → With Featured Highlight → Primary*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.featured_date
+   * - **Documentation**: https://prismic.io/docs/fields/date
+   */
+  featured_date: prismic.DateField;
+
+  /**
+   * Featured Title field in *NewsHighlightSplit → With Featured Highlight → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_highlight_split.with_featured_highlight.primary.featured_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  featured_title: prismic.RichTextField;
+}
+
+/**
+ * With Featured Highlight variation for NewsHighlightSplit Slice
+ *
+ * - **API ID**: `with_featured_highlight`
+ * - **Description**: Shows a set of news articles next to a visually highlighted feature, providing context and emphasis for both.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type NewsHighlightSplitSliceWithFeaturedHighlight =
+  prismic.SharedSliceVariation<
+    "with_featured_highlight",
+    Simplify<NewsHighlightSplitSliceWithFeaturedHighlightPrimary>,
+    never
+  >;
+
+/**
+ * Slice variation for *NewsHighlightSplit*
+ */
+type NewsHighlightSplitSliceVariation =
+  NewsHighlightSplitSliceWithFeaturedHighlight;
+
+/**
+ * NewsHighlightSplit Shared Slice
+ *
+ * - **API ID**: `news_highlight_split`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type NewsHighlightSplitSlice = prismic.SharedSlice<
+  "news_highlight_split",
+  NewsHighlightSplitSliceVariation
+>;
+
+/**
+ * Primary content in *NewsletterOptin → With image → Primary*
+ */
+export interface NewsletterOptinSliceWithImagePrimary {
+  /**
+   * Title field in *NewsletterOptin → With image → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: newsletter_optin.with_image.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Illustration field in *NewsletterOptin → With image → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: newsletter_optin.with_image.primary.illustration
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  illustration: prismic.ImageField<never>;
+
+  /**
+   * Description field in *NewsletterOptin → With image → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: newsletter_optin.with_image.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Submit Button field in *NewsletterOptin → With image → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: newsletter_optin.with_image.primary.submit_button
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  submit_button: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    "icon_only" | "text_only" | "text_and_icon"
+  >;
+
+  /**
+   * player field in *NewsletterOptin → With image → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: newsletter_optin.with_image.primary.player
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  player: prismic.ImageField<never>;
+}
+
+/**
+ * With image variation for NewsletterOptin Slice
+ *
+ * - **API ID**: `with_image`
+ * - **Description**: Newsletter opt-in section with title, description, image, and input field/button for email address.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type NewsletterOptinSliceWithImage = prismic.SharedSliceVariation<
+  "with_image",
+  Simplify<NewsletterOptinSliceWithImagePrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *NewsletterOptin*
+ */
+type NewsletterOptinSliceVariation = NewsletterOptinSliceWithImage;
+
+/**
+ * NewsletterOptin Shared Slice
+ *
+ * - **API ID**: `newsletter_optin`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type NewsletterOptinSlice = prismic.SharedSlice<
+  "newsletter_optin",
+  NewsletterOptinSliceVariation
 >;
 
 /**
@@ -2693,6 +3442,11 @@ declare module "@prismicio/client" {
       FeatureCardGridSliceDefaultCardsPrimary,
       FeatureCardGridSliceVariation,
       FeatureCardGridSliceDefaultCards,
+      FeaturedArticlesGridSlice,
+      FeaturedArticlesGridSliceDefaultPrimaryArticlesItem,
+      FeaturedArticlesGridSliceDefaultPrimary,
+      FeaturedArticlesGridSliceVariation,
+      FeaturedArticlesGridSliceDefault,
       GalleryWithHighlightedQuoteSlice,
       GalleryWithHighlightedQuoteSliceDefaultWithQuotePrimaryGalleryImagesItem,
       GalleryWithHighlightedQuoteSliceDefaultWithQuotePrimary,
@@ -2716,6 +3470,13 @@ declare module "@prismicio/client" {
       IconCardsWithTeamSliceIconCardsAndTeamGridPrimary,
       IconCardsWithTeamSliceVariation,
       IconCardsWithTeamSliceIconCardsAndTeamGrid,
+      MediaFeedAndLeaderboardSlice,
+      MediaFeedAndLeaderboardSliceMediaGridWithTablePrimaryFeaturedNewsItem,
+      MediaFeedAndLeaderboardSliceMediaGridWithTablePrimaryNewsListItem,
+      MediaFeedAndLeaderboardSliceMediaGridWithTablePrimaryTableRowsItem,
+      MediaFeedAndLeaderboardSliceMediaGridWithTablePrimary,
+      MediaFeedAndLeaderboardSliceVariation,
+      MediaFeedAndLeaderboardSliceMediaGridWithTable,
       MediaHighlightCardSlice,
       MediaHighlightCardSliceImageWithHighlightedMessagePrimaryTextItem,
       MediaHighlightCardSliceImageWithHighlightedMessagePrimary,
@@ -2726,6 +3487,15 @@ declare module "@prismicio/client" {
       NewsFeedHighlightedSliceDefaultPrimary,
       NewsFeedHighlightedSliceVariation,
       NewsFeedHighlightedSliceDefault,
+      NewsHighlightSplitSlice,
+      NewsHighlightSplitSliceWithFeaturedHighlightPrimaryNewsItemsItem,
+      NewsHighlightSplitSliceWithFeaturedHighlightPrimary,
+      NewsHighlightSplitSliceVariation,
+      NewsHighlightSplitSliceWithFeaturedHighlight,
+      NewsletterOptinSlice,
+      NewsletterOptinSliceWithImagePrimary,
+      NewsletterOptinSliceVariation,
+      NewsletterOptinSliceWithImage,
       Section2Slice,
       Section2SliceDefaultPrimary,
       Section2SliceVariation,

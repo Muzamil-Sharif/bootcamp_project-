@@ -1,0 +1,210 @@
+{
+  "type": "SharedSlice",
+  "id": "media_feed_and_leaderboard",
+  "name": "MediaFeedAndLeaderboard",
+  "variations": [
+    {
+      "id": "media_grid_with_table",
+      "name": "Media Grid with Table",
+      "description": "Layout with a featured news card, a vertical list of secondary news items, and a leaderboard table with club rankings and stats.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "featured_news": {
+          "type": "Group",
+          "config": {
+            "label": "Featured News",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image"
+                }
+              },
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em",
+                  "label": "Title"
+                }
+              }
+            }
+          }
+        },
+        "news_list": {
+          "type": "Group",
+          "config": {
+            "label": "News List",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Thumbnail"
+                }
+              },
+              "meta": {
+                "type": "Text",
+                "config": {
+                  "label": "Meta (Hashtag, Date)"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em",
+                  "label": "Title"
+                }
+              }
+            }
+          }
+        },
+        "table_rows": {
+          "type": "Group",
+          "config": {
+            "label": "Leaderboard Rows",
+            "fields": {
+              "club_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Club heading",
+                  "placeholder": ""
+                }
+              },
+              "rank": {
+                "type": "Number",
+                "config": {
+                  "label": "Rank"
+                }
+              },
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Club Logo"
+                }
+              },
+              "club_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Club Name"
+                }
+              },
+              "gp_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "GP heading",
+                  "placeholder": ""
+                }
+              },
+              "gp": {
+                "type": "Number",
+                "config": {
+                  "label": "Games Played"
+                }
+              },
+              "wins_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Wins heading",
+                  "placeholder": ""
+                }
+              },
+              "w": {
+                "type": "Number",
+                "config": {
+                  "label": "Wins"
+                }
+              },
+              "draw_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Draw heading",
+                  "placeholder": ""
+                }
+              },
+              "d": {
+                "type": "Number",
+                "config": {
+                  "label": "Draws"
+                }
+              },
+              "losses_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "losses heading",
+                  "placeholder": ""
+                }
+              },
+              "l": {
+                "type": "Number",
+                "config": {
+                  "label": "Losses"
+                }
+              },
+              "goals_for_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Goals for heading",
+                  "placeholder": ""
+                }
+              },
+              "f": {
+                "type": "Number",
+                "config": {
+                  "label": "Goals For"
+                }
+              },
+              "goal_against_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "goal against heading",
+                  "placeholder": ""
+                }
+              },
+              "a": {
+                "type": "Number",
+                "config": {
+                  "label": "Goals Against"
+                }
+              },
+              "goal_difference_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "goal difference heading",
+                  "placeholder": ""
+                }
+              },
+              "gd": {
+                "type": "Number",
+                "config": {
+                  "label": "Goal Difference"
+                }
+              }
+            }
+          }
+        },
+        "recent_news": {
+          "type": "Text",
+          "config": {
+            "label": "Recent news",
+            "placeholder": ""
+          }
+        },
+        "club_ranking": {
+          "type": "Text",
+          "config": {
+            "label": "Club Ranking",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -10,6 +10,7 @@ export const components = {
     () => import("./FeatureBannerHighlightedCta"),
   ),
   feature_card_grid: dynamic(() => import("./FeatureCardGrid")),
+  featured_articles_grid: dynamic(() => import("./FeaturedArticlesGrid")),
   gallery_with_highlighted_quote: dynamic(
     () => import("./GalleryWithHighlightedQuote"),
   ),
@@ -17,8 +18,13 @@ export const components = {
   hero_banner: dynamic(() => import("./HeroBanner")),
   hero_with_navbar: dynamic(() => import("./HeroWithNavbar")),
   icon_cards_with_team: dynamic(() => import("./IconCardsWithTeam")),
+  media_feed_and_leaderboard: dynamic(
+    () => import("./MediaFeedAndLeaderboard"),
+  ),
   media_highlight_card: dynamic(() => import("./MediaHighlightCard")),
   news_feed_highlighted: dynamic(() => import("./NewsFeedHighlighted")),
+  news_highlight_split: dynamic(() => import("./NewsHighlightSplit")),
+  newsletter_optin: dynamic(() => import("./NewsletterOptin")),
   section2: dynamic(() => import("./Section2")),
   section7: dynamic(() => import("./Section7")),
   spacer: dynamic(() => import("./Spacer")),

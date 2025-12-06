@@ -17,6 +17,18 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "newsletter_optin": {
+              "type": "SharedSlice"
+            },
+            "featured_articles_grid": {
+              "type": "SharedSlice"
+            },
+            "media_feed_and_leaderboard": {
+              "type": "SharedSlice"
+            },
+            "news_highlight_split": {
+              "type": "SharedSlice"
+            },
             "news_feed_highlighted": {
               "type": "SharedSlice"
             },

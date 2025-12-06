@@ -1,0 +1,304 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "media_grid_with_table",
+		"primary": {
+			"featured_news": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+										"width": 3277,
+										"height": 4092
+									},
+									"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+									"width": 3277,
+									"height": 4092,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "west",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "boy",
+									"type": "Text"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Laborum duis irure ullamco cupidatat. Ullamco irure non nulla mollit cupidatat reprehenderit labore Lorem. Aliquip fugiat reprehenderit incididunt duis dolor anim exercitation velit et eu quis in laborum voluptate."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"news_list": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+										"width": 5848,
+										"height": 3899
+									},
+									"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+									"width": 5848,
+									"height": 3899,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "stream",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"meta",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "shirt",
+									"type": "Text"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Minim duis ea eu fugiat esse consectetur eiusmod dolor ut velit sit. Sunt occaecat eu veniam irure consequat. Proident duis consectetur adipisicing laboris enim incididunt laboris amet nostrud anim exercitation officia fugiat laborum."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"table_rows": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"rank",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "80",
+									"type": "Number"
+								}
+							],
+							[
+								"logo",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+										"width": 6000,
+										"height": 4000
+									},
+									"url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+									"width": 6000,
+									"height": 4000,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "adventure",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"club_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "gradually",
+									"type": "Text"
+								}
+							],
+							[
+								"gp",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "47",
+									"type": "Number"
+								}
+							],
+							[
+								"w",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "6",
+									"type": "Number"
+								}
+							],
+							[
+								"d",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "88",
+									"type": "Number"
+								}
+							],
+							[
+								"l",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "44",
+									"type": "Number"
+								}
+							],
+							[
+								"f",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "41",
+									"type": "Number"
+								}
+							],
+							[
+								"a",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "92",
+									"type": "Number"
+								}
+							],
+							[
+								"gd",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "41",
+									"type": "Number"
+								}
+							],
+							[
+								"club_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "worried",
+									"type": "Text"
+								}
+							],
+							[
+								"gp_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "coach",
+									"type": "Text"
+								}
+							],
+							[
+								"wins_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "bad",
+									"type": "Text"
+								}
+							],
+							[
+								"losses_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "sugar",
+									"type": "Text"
+								}
+							],
+							[
+								"draw_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "fruit",
+									"type": "Text"
+								}
+							],
+							[
+								"goals_for_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "printed",
+									"type": "Text"
+								}
+							],
+							[
+								"goal_against_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "customs",
+									"type": "Text"
+								}
+							],
+							[
+								"goal_difference_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "stone",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"recent_news": {
+				"__TYPE__": "FieldContent",
+				"value": "tried",
+				"type": "Text"
+			},
+			"club_ranking": {
+				"__TYPE__": "FieldContent",
+				"value": "tired",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

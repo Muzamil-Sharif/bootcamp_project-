@@ -1,0 +1,60 @@
+{
+  "type": "SharedSlice",
+  "id": "newsletter_optin",
+  "name": "NewsletterOptin",
+  "variations": [
+    {
+      "id": "with_image",
+      "name": "With image",
+      "description": "Newsletter opt-in section with title, description, image, and input field/button for email address.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2,strong",
+            "label": "Title"
+          }
+        },
+        "illustration": {
+          "type": "Image",
+          "config": {
+            "label": "Illustration"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "submit_button": {
+          "type": "Link",
+          "config": {
+            "label": "Submit Button",
+            "allowText": true,
+            "repeat": false,
+            "variants": [
+              "icon_only",
+              "text_only",
+              "text_and_icon"
+            ],
+            "select": null
+          }
+        },
+        "player": {
+          "type": "Image",
+          "config": {
+            "label": "player",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

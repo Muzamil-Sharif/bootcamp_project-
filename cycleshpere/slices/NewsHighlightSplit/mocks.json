@@ -1,0 +1,139 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "with_featured_highlight",
+		"primary": {
+			"news_section_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Guess"
+						}
+					}
+				]
+			},
+			"news_items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"thumbnail",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+										"width": 5616,
+										"height": 3744
+									},
+									"url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+									"width": 5616,
+									"height": 3744,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "explain"
+								}
+							],
+							[
+								"author",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "dear",
+									"type": "Text"
+								}
+							],
+							[
+								"date",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2018-05-22"
+								}
+							],
+							[
+								"headline",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "bear",
+									"type": "Text"
+								}
+							],
+							[
+								"summary",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Magna elit occaecat adipisicing veniam velit tempor ipsum occaecat elit cillum incididunt cillum. Pariatur sit dolore ex. Elit dolore do cupidatat pariatur deserunt aute tempor ea cillum mollit amet excepteur et ea."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"featured_background": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+					"width": 5243,
+					"height": 3495
+				},
+				"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+				"width": 5243,
+				"height": 3495,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "brown"
+			},
+			"featured_tag": {
+				"__TYPE__": "FieldContent",
+				"value": "task",
+				"type": "Text"
+			},
+			"featured_author": {
+				"__TYPE__": "FieldContent",
+				"value": "short",
+				"type": "Text"
+			},
+			"featured_date": {
+				"__TYPE__": "FieldContent",
+				"type": "Date",
+				"value": "2013-12-25"
+			},
+			"featured_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Drawn"
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

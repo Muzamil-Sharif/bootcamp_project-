@@ -1,0 +1,94 @@
+{
+  "type": "SharedSlice",
+  "id": "news_highlight_split",
+  "name": "NewsHighlightSplit",
+  "variations": [
+    {
+      "id": "with_featured_highlight",
+      "name": "With Featured Highlight",
+      "description": "Shows a set of news articles next to a visually highlighted feature, providing context and emphasis for both.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "news_section_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2,strong",
+            "label": "News Section Title"
+          }
+        },
+        "news_items": {
+          "type": "Group",
+          "config": {
+            "label": "News Items",
+            "fields": {
+              "thumbnail": {
+                "type": "Image",
+                "config": {
+                  "label": "Thumbnail"
+                }
+              },
+              "author": {
+                "type": "Text",
+                "config": {
+                  "label": "Author"
+                }
+              },
+              "date": {
+                "type": "Date",
+                "config": {
+                  "label": "Date"
+                }
+              },
+              "headline": {
+                "type": "Text",
+                "config": {
+                  "label": "Headline"
+                }
+              },
+              "summary": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em",
+                  "label": "Summary"
+                }
+              }
+            }
+          }
+        },
+        "featured_background": {
+          "type": "Image",
+          "config": {
+            "label": "Featured Background"
+          }
+        },
+        "featured_tag": {
+          "type": "Text",
+          "config": {
+            "label": "Featured Tag"
+          }
+        },
+        "featured_author": {
+          "type": "Text",
+          "config": {
+            "label": "Featured Author"
+          }
+        },
+        "featured_date": {
+          "type": "Date",
+          "config": {
+            "label": "Featured Date"
+          }
+        },
+        "featured_title": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "heading2,strong",
+            "label": "Featured Title"
+          }
+        }
+      }
+    }
+  ]
+}
