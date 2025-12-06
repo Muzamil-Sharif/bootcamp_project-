@@ -53,7 +53,7 @@ const FeaturedArticlesGrid: FC<FeaturedArticlesGridProps> = ({ slice }) => {
               {/* Article Content */}
               <div className="flex flex-col p-5 md:p-6 flex-1">
                 {/* Author & Date */}
-                <div className="flex flex-row gap-3 mb-8">
+                <div className="flex flex-row gap-3 mb-8 xl:-mx-6">
                   {/* Author Image */}
                   {item.author_image && (
                     <div className="shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden">
@@ -83,14 +83,14 @@ const FeaturedArticlesGrid: FC<FeaturedArticlesGridProps> = ({ slice }) => {
 
                 {/* Article Title */}
                 {item.title && (
-                  <h3 className="text-lg md:text-xl xl:text-[20px] xl:w-[350px] xl:font-[415px] text-gray-900 leading-snug mb-3 line-clamp-2 transition-colors duration-200">
+                  <h3 className="text-lg md:text-xl xl:text-[20px] xl:-ml-6 xl:w-[350px] xl:font-[415px] text-gray-900 leading-snug mb-3 line-clamp-2 transition-colors duration-200">
                     {item.title}
                   </h3>
                 )}
 
                 {/* Article Summary */}
                 {item.summary && (
-                  <p className="text-sm md:text-base xl:text-[14px] xl:font-medium text-gray-600 leading-relaxed line-clamp-3 flex-1">
+                  <p className="text-sm md:text-base xl:text-[16px] xl:-mx-6 xl:font-medium text-gray-600 leading-relaxed line-clamp-3 flex-1">
                     {item.summary}
                   </p>
                 )}
