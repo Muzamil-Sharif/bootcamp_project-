@@ -1,0 +1,59 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"main_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Labore id anim reprehenderit consectetur nostrud officia adipisicing. Amet Lorem esse sit est pariatur incididunt dolore nisi cupidatat eiusmod eiusmod quis magna pariatur commodo."
+						}
+					}
+				]
+			},
+			"cyclist": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+					"width": 3500,
+					"height": 2338
+				},
+				"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+				"width": 3500,
+				"height": 2338,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "letter",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eu laboris ad ipsum. Nulla excepteur fugiat ipsum ad sint fugiat aliquip est voluptate irure dolore culpa irure."
+						}
+					}
+				]
+			},
+			"latest_test": {
+				"__TYPE__": "FieldContent",
+				"value": "bottle",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

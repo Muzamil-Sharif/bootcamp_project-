@@ -1,0 +1,120 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"articles": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+										"width": 5616,
+										"height": 3744
+									},
+									"url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+									"width": 5616,
+									"height": 3744,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "bottle",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"category",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "riding",
+									"type": "Text"
+								}
+							],
+							[
+								"author_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51",
+										"width": 2545,
+										"height": 2545
+									},
+									"url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51",
+									"width": 2545,
+									"height": 2545,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "final",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"author_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "scientific",
+									"type": "Text"
+								}
+							],
+							[
+								"headline",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "gate",
+									"type": "Text"
+								}
+							],
+							[
+								"summary",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Eiusmod reprehenderit aliqua laborum laborum. Non enim in id tempor amet do ex tempor aliquip ea."
+											}
+										}
+									]
+								}
+							],
+							[
+								"date",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "cool",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"article": {
+				"__TYPE__": "FieldContent",
+				"value": "feet",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

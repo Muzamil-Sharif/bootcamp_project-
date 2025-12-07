@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  blog_post: dynamic(() => import("./BlogPost")),
   category_cards_grid: dynamic(() => import("./CategoryCardsGrid")),
   contact_form_image_side: dynamic(() => import("./ContactFormImageSide")),
   cta_image_card: dynamic(() => import("./CtaImageCard")),
@@ -11,6 +12,7 @@ export const components = {
   ),
   feature_card_grid: dynamic(() => import("./FeatureCardGrid")),
   featured_articles_grid: dynamic(() => import("./FeaturedArticlesGrid")),
+  featured_articles_grid_2: dynamic(() => import("./FeaturedArticlesGrid2")),
   gallery_with_highlighted_quote: dynamic(
     () => import("./GalleryWithHighlightedQuote"),
   ),
@@ -25,6 +27,8 @@ export const components = {
   news_feed_highlighted: dynamic(() => import("./NewsFeedHighlighted")),
   news_highlight_split: dynamic(() => import("./NewsHighlightSplit")),
   newsletter_optin: dynamic(() => import("./NewsletterOptin")),
+  rich_content: dynamic(() => import("./RichContent")),
+  rich_content_text: dynamic(() => import("./RichContentText")),
   section2: dynamic(() => import("./Section2")),
   section7: dynamic(() => import("./Section7")),
   spacer: dynamic(() => import("./Spacer")),

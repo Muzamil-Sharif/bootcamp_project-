@@ -371,6 +371,9 @@ export type NavbarDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | FeaturedArticlesGrid2Slice
+  | RichContentSlice
+  | BlogPostSlice
   | NewsletterOptinSlice
   | FeaturedArticlesGridSlice
   | MediaFeedAndLeaderboardSlice
@@ -451,6 +454,118 @@ export type AllDocumentTypes =
   | LandingPageDocument
   | NavbarDocument
   | PageDocument;
+
+/**
+ * Item in *BlogPost → Default → Primary → Meta Information*
+ */
+export interface BlogPostSliceDefaultPrimaryMetaInfoItem {
+  /**
+   * Author and date field in *BlogPost → Default → Primary → Meta Information*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.default.primary.meta_info[].author
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  author: prismic.KeyTextField;
+
+  /**
+   * Reading Time field in *BlogPost → Default → Primary → Meta Information*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.default.primary.meta_info[].reading_time
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  reading_time: prismic.KeyTextField;
+
+  /**
+   * profile icon field in *BlogPost → Default → Primary → Meta Information*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.default.primary.meta_info[].profile_icon
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  profile_icon: prismic.ImageField<never>;
+
+  /**
+   * clock icon field in *BlogPost → Default → Primary → Meta Information*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.default.primary.meta_info[].clock_icon
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  clock_icon: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *BlogPost → Default → Primary*
+ */
+export interface BlogPostSliceDefaultPrimary {
+  /**
+   * Title field in *BlogPost → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Meta Information field in *BlogPost → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.default.primary.meta_info[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  meta_info: prismic.GroupField<
+    Simplify<BlogPostSliceDefaultPrimaryMetaInfoItem>
+  >;
+
+  /**
+   * Hero Image field in *BlogPost → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.default.primary.hero_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  hero_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for BlogPost Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default layout for a featured blog post/article, with title, author/date/meta, hero image, and content.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BlogPostSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BlogPostSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *BlogPost*
+ */
+type BlogPostSliceVariation = BlogPostSliceDefault;
+
+/**
+ * BlogPost Shared Slice
+ *
+ * - **API ID**: `blog_post`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BlogPostSlice = prismic.SharedSlice<
+  "blog_post",
+  BlogPostSliceVariation
+>;
 
 /**
  * Item in *CategoryCardsGrid → Default → Primary → Button*
@@ -1283,6 +1398,138 @@ type FeaturedArticlesGridSliceVariation = FeaturedArticlesGridSliceDefault;
 export type FeaturedArticlesGridSlice = prismic.SharedSlice<
   "featured_articles_grid",
   FeaturedArticlesGridSliceVariation
+>;
+
+/**
+ * Item in *FeaturedArticlesGrid2 → Default → Primary → Articles*
+ */
+export interface FeaturedArticlesGrid2SliceDefaultPrimaryArticlesItem {
+  /**
+   * Article Image field in *FeaturedArticlesGrid2 → Default → Primary → Articles*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid_2.default.primary.articles[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Category label field in *FeaturedArticlesGrid2 → Default → Primary → Articles*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid_2.default.primary.articles[].category
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  category: prismic.KeyTextField;
+
+  /**
+   * Author Image field in *FeaturedArticlesGrid2 → Default → Primary → Articles*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid_2.default.primary.articles[].author_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  author_image: prismic.ImageField<never>;
+
+  /**
+   * Author Name field in *FeaturedArticlesGrid2 → Default → Primary → Articles*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid_2.default.primary.articles[].author_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  author_name: prismic.KeyTextField;
+
+  /**
+   * Date field in *FeaturedArticlesGrid2 → Default → Primary → Articles*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid_2.default.primary.articles[].date
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  date: prismic.KeyTextField;
+
+  /**
+   * Headline field in *FeaturedArticlesGrid2 → Default → Primary → Articles*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid_2.default.primary.articles[].headline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  headline: prismic.KeyTextField;
+
+  /**
+   * Summary field in *FeaturedArticlesGrid2 → Default → Primary → Articles*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid_2.default.primary.articles[].summary
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  summary: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *FeaturedArticlesGrid2 → Default → Primary*
+ */
+export interface FeaturedArticlesGrid2SliceDefaultPrimary {
+  /**
+   * Article field in *FeaturedArticlesGrid2 → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid_2.default.primary.article
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  article: prismic.KeyTextField;
+
+  /**
+   * Articles field in *FeaturedArticlesGrid2 → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_articles_grid_2.default.primary.articles[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  articles: prismic.GroupField<
+    Simplify<FeaturedArticlesGrid2SliceDefaultPrimaryArticlesItem>
+  >;
+}
+
+/**
+ * Default variation for FeaturedArticlesGrid2 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Displays a grid of featured articles with author, category, and article metadata. Includes carousel navigation controls.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeaturedArticlesGrid2SliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FeaturedArticlesGrid2SliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FeaturedArticlesGrid2*
+ */
+type FeaturedArticlesGrid2SliceVariation = FeaturedArticlesGrid2SliceDefault;
+
+/**
+ * FeaturedArticlesGrid2 Shared Slice
+ *
+ * - **API ID**: `featured_articles_grid_2`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeaturedArticlesGrid2Slice = prismic.SharedSlice<
+  "featured_articles_grid_2",
+  FeaturedArticlesGrid2SliceVariation
 >;
 
 /**
@@ -2780,6 +3027,126 @@ export type NewsletterOptinSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *RichContent → Default → Primary*
+ */
+export interface RichContentSliceDefaultPrimary {
+  /**
+   * Main text field in *RichContent → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_content.default.primary.main_text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  main_text: prismic.RichTextField;
+
+  /**
+   * cyclist field in *RichContent → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_content.default.primary.cyclist
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  cyclist: prismic.ImageField<never>;
+
+  /**
+   * latest test field in *RichContent → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_content.default.primary.latest_test
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  latest_test: prismic.KeyTextField;
+
+  /**
+   * Text field in *RichContent → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_content.default.primary.text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for RichContent Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RichContentSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<RichContentSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *RichContent*
+ */
+type RichContentSliceVariation = RichContentSliceDefault;
+
+/**
+ * RichContent Shared Slice
+ *
+ * - **API ID**: `rich_content`
+ * - **Description**: RichContent
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RichContentSlice = prismic.SharedSlice<
+  "rich_content",
+  RichContentSliceVariation
+>;
+
+/**
+ * Primary content in *RichContentText → Default → Primary*
+ */
+export interface RichContentTextSliceDefaultPrimary {
+  /**
+   * Main text field in *RichContentText → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_content_text.default.primary.main_text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  main_text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for RichContentText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RichContentTextSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<RichContentTextSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *RichContentText*
+ */
+type RichContentTextSliceVariation = RichContentTextSliceDefault;
+
+/**
+ * RichContentText Shared Slice
+ *
+ * - **API ID**: `rich_content_text`
+ * - **Description**: RichContentText
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RichContentTextSlice = prismic.SharedSlice<
+  "rich_content_text",
+  RichContentTextSliceVariation
+>;
+
+/**
  * Primary content in *Section2 → Default → Primary*
  */
 export interface Section2SliceDefaultPrimary {
@@ -3418,6 +3785,11 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      BlogPostSlice,
+      BlogPostSliceDefaultPrimaryMetaInfoItem,
+      BlogPostSliceDefaultPrimary,
+      BlogPostSliceVariation,
+      BlogPostSliceDefault,
       CategoryCardsGridSlice,
       CategoryCardsGridSliceDefaultPrimaryButtonItem,
       CategoryCardsGridSliceDefaultPrimaryCardsItem,
@@ -3447,6 +3819,11 @@ declare module "@prismicio/client" {
       FeaturedArticlesGridSliceDefaultPrimary,
       FeaturedArticlesGridSliceVariation,
       FeaturedArticlesGridSliceDefault,
+      FeaturedArticlesGrid2Slice,
+      FeaturedArticlesGrid2SliceDefaultPrimaryArticlesItem,
+      FeaturedArticlesGrid2SliceDefaultPrimary,
+      FeaturedArticlesGrid2SliceVariation,
+      FeaturedArticlesGrid2SliceDefault,
       GalleryWithHighlightedQuoteSlice,
       GalleryWithHighlightedQuoteSliceDefaultWithQuotePrimaryGalleryImagesItem,
       GalleryWithHighlightedQuoteSliceDefaultWithQuotePrimary,
@@ -3496,6 +3873,14 @@ declare module "@prismicio/client" {
       NewsletterOptinSliceWithImagePrimary,
       NewsletterOptinSliceVariation,
       NewsletterOptinSliceWithImage,
+      RichContentSlice,
+      RichContentSliceDefaultPrimary,
+      RichContentSliceVariation,
+      RichContentSliceDefault,
+      RichContentTextSlice,
+      RichContentTextSliceDefaultPrimary,
+      RichContentTextSliceVariation,
+      RichContentTextSliceDefault,
       Section2Slice,
       Section2SliceDefaultPrimary,
       Section2SliceVariation,

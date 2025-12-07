@@ -1,0 +1,68 @@
+{
+  "type": "SharedSlice",
+  "id": "blog_post",
+  "name": "BlogPost",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Default layout for a featured blog post/article, with title, author/date/meta, hero image, and content.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Title"
+          }
+        },
+        "meta_info": {
+          "type": "Group",
+          "config": {
+            "label": "Meta Information",
+            "fields": {
+              "author": {
+                "type": "Text",
+                "config": {
+                  "label": "Author and date",
+                  "placeholder": ""
+                }
+              },
+              "reading_time": {
+                "type": "Text",
+                "config": {
+                  "label": "Reading Time"
+                }
+              },
+              "profile_icon": {
+                "type": "Image",
+                "config": {
+                  "label": "profile icon",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "clock_icon": {
+                "type": "Image",
+                "config": {
+                  "label": "clock icon",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
+        "hero_image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

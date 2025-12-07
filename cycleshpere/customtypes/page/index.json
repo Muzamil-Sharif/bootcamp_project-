@@ -9,7 +9,7 @@
       "uid": {
         "type": "UID",
         "config": {
-          "label": "general-news-page"
+          "label": "blogs-page"
         }
       },
       "slices": {
@@ -17,6 +17,15 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "featured_articles_grid_2": {
+              "type": "SharedSlice"
+            },
+            "rich_content": {
+              "type": "SharedSlice"
+            },
+            "blog_post": {
+              "type": "SharedSlice"
+            },
             "newsletter_optin": {
               "type": "SharedSlice"
             },

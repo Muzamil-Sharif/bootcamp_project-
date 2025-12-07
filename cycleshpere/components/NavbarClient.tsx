@@ -30,7 +30,7 @@ export default function NavbarClient({ data }: NavbarClientProps) {
 
     const floatingPages = ["/about", "/join"];
     const rectangularPages = ["/contact-us"];
-    const simplePages = ["/", "/services", "/events", "/news", "/products"];
+    const simplePages = ["/", "/blogs-page", "/events", "/news", "/products"];
 
     let navClass =
         "fixed z-50 top-0 w-full transition-all duration-300";

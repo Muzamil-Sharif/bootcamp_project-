@@ -1,0 +1,78 @@
+{
+  "type": "SharedSlice",
+  "id": "featured_articles_grid_2",
+  "name": "FeaturedArticlesGrid2",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Displays a grid of featured articles with author, category, and article metadata. Includes carousel navigation controls.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "article": {
+          "type": "Text",
+          "config": {
+            "label": "Article",
+            "placeholder": ""
+          }
+        },
+        "articles": {
+          "type": "Group",
+          "config": {
+            "label": "Articles",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Article Image"
+                }
+              },
+              "category": {
+                "type": "Text",
+                "config": {
+                  "label": "Category label",
+                  "placeholder": ""
+                }
+              },
+              "author_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Author Image"
+                }
+              },
+              "author_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Author Name"
+                }
+              },
+              "date": {
+                "type": "Text",
+                "config": {
+                  "label": "Date",
+                  "placeholder": ""
+                }
+              },
+              "headline": {
+                "type": "Text",
+                "config": {
+                  "label": "Headline"
+                }
+              },
+              "summary": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "label": "Summary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
