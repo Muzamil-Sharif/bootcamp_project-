@@ -26,9 +26,9 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-16">
         {/* Title and Description */}
         <div className="mb-8 md:mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-black mb-3 md:mb-4">
+          <div className="text-3xl md:text-4xl lg:text-5xl font-medium text-black mb-3 md:mb-4">
             <PrismicRichText field={slice.primary.title} />
-          </h2>
+          </div>
           <div className="text-base md:text-lg font-normal xl:w-[524px] text-black max-w-2xl">
             <PrismicRichText field={slice.primary.description} />
           </div>
@@ -42,6 +42,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[308px] h-[180px] xl:h-[244px] rounded-2xl overflow-hidden bg-gray-200">
               <PrismicNextImage
                 field={slice.primary.gallery_images[0].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -52,6 +53,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[180px] xl:h-[240px] rounded-[22px] overflow-hidden bg-gray-200">
               <PrismicNextImage
                 field={slice.primary.gallery_images[1].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -62,6 +64,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[180px] xl:h-[244px] overflow-hidden bg-gray-200" style={{ borderTopLeftRadius: '30px', borderTopRightRadius: '29px', borderBottomRightRadius: '9px', borderBottomLeftRadius: '22px' }}>
               <PrismicNextImage
                 field={slice.primary.gallery_images[2].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -72,6 +75,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[180px] xl:h-[240px] overflow-hidden bg-gray-200" style={{ borderTopLeftRadius: '28px', borderTopRightRadius: '38px', borderBottomRightRadius: '21px', borderBottomLeftRadius: '18px' }}>
               <PrismicNextImage
                 field={slice.primary.gallery_images[3].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -83,6 +87,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[100px] xl:h-[140px] rounded-[22px] overflow-hidden bg-gray-200">
               <PrismicNextImage
                 field={slice.primary.gallery_images[4].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -93,6 +98,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[100px] xl:h-[140px] rounded-[19px] overflow-hidden bg-gray-200">
               <PrismicNextImage
                 field={slice.primary.gallery_images[5].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -103,6 +109,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[100px] xl:h-[140px] rounded-[23px] overflow-hidden bg-gray-200">
               <PrismicNextImage
                 field={slice.primary.gallery_images[6].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -113,6 +120,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[100px] xl:h-[140px] rounded-[21px] overflow-hidden bg-gray-200">
               <PrismicNextImage
                 field={slice.primary.gallery_images[7].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -124,6 +132,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[170px] xl:h-[232px] overflow-hidden bg-gray-200" style={{ borderTopLeftRadius: '29px', borderTopRightRadius: '19px', borderBottomRightRadius: '28px', borderBottomLeftRadius: '33px' }}>
               <PrismicNextImage
                 field={slice.primary.gallery_images[8].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -134,6 +143,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[170px] xl:h-[228px] rounded-[29px] overflow-hidden bg-gray-200">
               <PrismicNextImage
                 field={slice.primary.gallery_images[9].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -144,6 +154,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[170px] xl:h-[228px] rounded-[35px] overflow-hidden bg-gray-200">
               <PrismicNextImage
                 field={slice.primary.gallery_images[10].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -154,6 +165,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[312px] h-[170px] xl:h-[228px] rounded-[28px] overflow-hidden bg-gray-200">
               <PrismicNextImage
                 field={slice.primary.gallery_images[11].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -165,6 +177,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[308px] h-[280px] xl:h-[404px] rounded-[36px] overflow-hidden bg-gray-200">
               <PrismicNextImage
                 field={slice.primary.gallery_images[12].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -177,6 +190,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
               <div className="w-10 h-10 xl:w-18 xl:h-18 md:w-12 md:h-12 mb-3 md:mb-4">
                 <PrismicNextImage
                   field={slice.primary.inverted_commas}
+                  fallbackAlt=""
                   className="w-full xl:-mx-65 h-full object-contain"
                 />
               </div>
@@ -196,6 +210,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
               {slice.primary.north_east_arrow?.url && (
                 <PrismicNextImage
                   field={slice.primary.north_east_arrow}
+                  fallbackAlt=""
                   className="w-3 h-3 object-contain"
                 />
               )}
@@ -207,6 +222,7 @@ const GalleryWithHighlightedQuote: FC<GalleryWithHighlightedQuoteProps> = ({
             <div className="w-full xl:w-[304px] h-[280px] xl:h-[404px] overflow-hidden bg-gray-200" style={{ borderTopLeftRadius: '35px', borderTopRightRadius: '32px', borderBottomRightRadius: '39px', borderBottomLeftRadius: '42px' }}>
               <PrismicNextImage
                 field={slice.primary.gallery_images[13].image}
+                fallbackAlt=""
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>

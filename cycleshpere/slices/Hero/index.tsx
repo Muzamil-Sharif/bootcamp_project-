@@ -59,6 +59,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
               <div className="w-40 h-28 xl:w-60 xl:h-40 rounded-xl overflow-hidden shrink-0">
                 <PrismicNextImage
                   field={slice.primary.cycle_image}
+                  fallbackAlt=""
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -77,7 +78,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             {/* RIGHT: Plus Button */}
             <button
               className="w-12 h-12 xl:w-20 xl:h-20 xl:mx-20 xl:my-10 flex items-center justify-center rounded-full border border-black text-black hover:bg-black hover:text-white transition"
-              aria-label="Add" 
+              aria-label="Add"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -97,27 +98,18 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
         </div>
 
-       
+
         {/* RIGHT SECTION (Main Image) */}
         {/* ------------------------------ */}
         <div className="relative xl:-mt-10 w-full flex justify-center">
 
           {/* Main Cyclist Image */}
           <div
-            className="
-              w-full
-              max-w-[775px]      /* Figma width */
-              h-[654px]          /* Figma height */
-              rounded-3xl
-              overflow-hidden
-              relative 
-              xl:w-[760px]
-              xl:h-[620px]
-            
-            "
+            className="w-full max-w-[775px] h-[654px] rounded-3xl overflow-hidden relative xl:w-[760px] xl:h-[620px]"
           >
             <PrismicNextImage
               field={slice.primary.cyclists_image}
+              fallbackAlt=""
               className="w-full h-full object-cover"
             />
           </div>

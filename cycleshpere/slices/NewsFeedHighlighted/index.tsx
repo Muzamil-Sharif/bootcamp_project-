@@ -28,6 +28,7 @@ const NewsFeedHighlighted: FC<NewsFeedHighlightedProps> = ({ slice }) => {
             <div className="w-full md:w-[500px] lg:w-[580px] xl:w-[623px] h-auto md:h-[600px] lg:h-[700px] xl:h-[777px] mx-auto xl:mx-0">
               <PrismicNextImage
                 field={slice.primary.cyclist}
+                fallbackAlt=""
                 className="w-full h-full object-cover object-center"
               />
             </div>
@@ -35,7 +36,7 @@ const NewsFeedHighlighted: FC<NewsFeedHighlightedProps> = ({ slice }) => {
 
           {/* Left Column: Heading - Positioned Above Cyclist with Higher Z-Index */}
           <div className="relative xl:absolute xl:top-[204px] xl:left-[135px] xl:z-10 mb-6 md:mb-8 lg:mb-10 xl:mb-0">
-            <h2
+            <div
               className="w-full md:w-[400px] xl:-my-24 xl:mx-4 lg:w-[450px] xl:w-[470px] h-auto xl:h-[375px] text-3xl md:text-4xl lg:text-5xl xl:text-[80px] font-semibold uppercase leading-tight md:leading-[60px] xl:leading-[75px]"
               style={{
                 fontFamily: 'Inter, sans-serif',
@@ -46,7 +47,7 @@ const NewsFeedHighlighted: FC<NewsFeedHighlightedProps> = ({ slice }) => {
               }}
             >
               <PrismicRichText field={slice.primary.heading} />
-            </h2>
+            </div>
           </div>
 
           {/* Right Column: News Items - Positioned Absolutely on XL */}
@@ -73,6 +74,7 @@ const NewsFeedHighlighted: FC<NewsFeedHighlightedProps> = ({ slice }) => {
                     {/* Background Image */}
                     <PrismicNextImage
                       field={item.image}
+                      fallbackAlt=""
                       className="w-full h-full object-cover xl:-my-6 group-hover:scale-105 transition-transform duration-300"
                     />
 

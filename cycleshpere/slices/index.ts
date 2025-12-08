@@ -24,6 +24,7 @@ export const components = {
     () => import("./MediaFeedAndLeaderboard"),
   ),
   media_highlight_card: dynamic(() => import("./MediaHighlightCard")),
+  membership_form: dynamic(() => import("./MembershipForm")),
   news_feed_highlighted: dynamic(() => import("./NewsFeedHighlighted")),
   news_highlight_split: dynamic(() => import("./NewsHighlightSplit")),
   newsletter_optin: dynamic(() => import("./NewsletterOptin")),

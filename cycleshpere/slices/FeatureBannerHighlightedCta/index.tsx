@@ -30,15 +30,16 @@ const FeatureBannerHighlightedCta: FC<FeatureBannerHighlightedCtaProps> = ({
           <div className="relative flex-1 w-full md:w-[800px] lg:w-[950px] xl:w-[1052px] h-[300px] md:h-[450px] lg:h-[500px] xl:h-[537px] xl:ml-[44px] xl:mt-[91px] rounded-[50px] overflow-hidden">
             <PrismicNextImage
               field={slice.primary.main_image}
+              fallbackAlt=""
               className="w-full h-full object-cover"
             />
 
             {/* Text Overlay */}
             <div className="absolute inset-0">
               {/* Headline */}
-              <h2 className="absolute w-full md:w-[400px] xl:w-[484px] h-auto xl:h-[61px] top-[120px] md:top-[150px] xl:top-[172px] left-[20px] md:left-[80px] xl:left-[116px] text-white text-3xl md:text-4xl xl:text-[50.4px] font-bold xl:leading-[100%]">
+              <div className="absolute w-full md:w-[400px] xl:w-[484px] h-auto xl:h-[61px] top-[120px] md:top-[150px] xl:top-[172px] left-[20px] md:left-[80px] xl:left-[116px] text-white text-3xl md:text-4xl xl:text-[50.4px] font-bold xl:leading-[100%]">
                 <PrismicRichText field={slice.primary.headline} />
-              </h2>
+              </div>
 
               {/* Subheadline */}
               <div className="absolute w-full md:w-[400px] xl:w-[484px] h-auto xl:h-[49px] top-[160px] md:top-[200px] xl:top-[232px] left-[20px] md:left-[70px] xl:left-[108px] text-white text-xl md:text-2xl xl:text-[40.4px] font-light xl:leading-[100%]">
@@ -72,6 +73,7 @@ const FeatureBannerHighlightedCta: FC<FeatureBannerHighlightedCtaProps> = ({
           <div className="w-full md:w-[200px] lg:w-[220px] xl:w-[231px] h-[400px] md:h-[450px] lg:h-[500px] xl:h-[515px] xl:mt-[101px] xl:mr-[44px] rounded-[50px] overflow-hidden">
             <PrismicNextImage
               field={slice.primary.supporting_image}
+              fallbackAlt=""
               className="w-full h-full object-cover"
             />
           </div>

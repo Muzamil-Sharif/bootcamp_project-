@@ -1,0 +1,121 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Language"
+						}
+					}
+				]
+			},
+			"personal_fields": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "twelve",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"contact_fields": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "truth",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"health_info_heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading4",
+						"content": {
+							"text": "Alive"
+						}
+					}
+				]
+			},
+			"health_question": {
+				"__TYPE__": "FieldContent",
+				"value": "pretty",
+				"type": "Text"
+			},
+			"health_yes_no": {
+				"__TYPE__": "FieldContent",
+				"value": "No",
+				"type": "Select"
+			},
+			"health_specify_label": {
+				"__TYPE__": "FieldContent",
+				"value": "remarkable",
+				"type": "Text"
+			},
+			"emergency_contact_fields": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "top",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"submit_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "repeat",
+				"type": "Text"
+			},
+			"footnote": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aute elit qui eu ad aliquip exercitation consectetur labore dolor. Magna ut fugiat ullamco. Non proident anim velit Lorem aliquip ex dolor id nisi sit consequat."
+						}
+					}
+				]
+			},
+			"emergency_contact": {
+				"__TYPE__": "FieldContent",
+				"value": "explain",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

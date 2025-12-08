@@ -50,9 +50,9 @@ const ContactFormImageSide: FC<ContactFormImageSideProps> = ({ slice }) => {
           {/* Left Column - Contact Form */}
           <div className="flex flex-col">
             {/* Title */}
-            <h2 className="text-4xl md:text-5xl font-normal lg:text-6xl xl:text-[99.9px] text-black mb-3 md:mb-4">
+            <div className="text-4xl md:text-5xl font-normal lg:text-6xl xl:text-[99.9px] text-black mb-3 md:mb-4">
               <PrismicRichText field={slice.primary.form_title} />
-            </h2>
+            </div>
 
             {/* Description */}
             <div className="w-full md:w-[500px] xl:w-[534px] h-auto xl:h-[33px] text-base xl:text-[17px] xl:leading-[32.3px] text-black mb-8 md:mb-10" style={{ fontFamily: 'Pontano Sans, sans-serif' }}>
@@ -145,6 +145,7 @@ const ContactFormImageSide: FC<ContactFormImageSideProps> = ({ slice }) => {
             <div className="w-full max-w-[350px] md:max-w-[400px] lg:max-w-none lg:w-auto rounded-3xl md:rounded-[32px] overflow-hidden">
               <PrismicNextImage
                 field={slice.primary.side_image}
+                fallbackAlt=""
                 className="w-full h-full object-cover"
               />
             </div>

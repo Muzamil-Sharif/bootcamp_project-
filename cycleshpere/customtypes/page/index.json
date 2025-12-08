@@ -9,7 +9,7 @@
       "uid": {
         "type": "UID",
         "config": {
-          "label": "blogs-page"
+          "label": "community-form"
         }
       },
       "slices": {
@@ -17,6 +17,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "membership_form": {
+              "type": "SharedSlice"
+            },
             "featured_articles_grid_2": {
               "type": "SharedSlice"
             },

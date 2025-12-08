@@ -1,0 +1,116 @@
+{
+  "type": "SharedSlice",
+  "id": "membership_form",
+  "name": "MembershipForm",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard membership joining form with multiple field sections including personal, health, and emergency contact information.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Title"
+          }
+        },
+        "personal_fields": {
+          "type": "Group",
+          "config": {
+            "label": "Personal Fields",
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Field Label"
+                }
+              }
+            }
+          }
+        },
+        "contact_fields": {
+          "type": "Group",
+          "config": {
+            "label": "Contact Fields",
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Field Label"
+                }
+              }
+            }
+          }
+        },
+        "health_info_heading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading4",
+            "label": "Health Info Heading"
+          }
+        },
+        "health_question": {
+          "type": "Text",
+          "config": {
+            "label": "Health Question"
+          }
+        },
+        "health_yes_no": {
+          "type": "Select",
+          "config": {
+            "label": "Health Yes/No Option",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        },
+        "health_specify_label": {
+          "type": "Text",
+          "config": {
+            "label": "Health Specify Field Label"
+          }
+        },
+        "emergency_contact": {
+          "type": "Text",
+          "config": {
+            "label": "Emergency Contact",
+            "placeholder": ""
+          }
+        },
+        "emergency_contact_fields": {
+          "type": "Group",
+          "config": {
+            "label": "Emergency Contact Fields",
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Field Label"
+                }
+              }
+            }
+          }
+        },
+        "submit_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Submit Button Text"
+          }
+        },
+        "footnote": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph",
+            "label": "Footnote"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

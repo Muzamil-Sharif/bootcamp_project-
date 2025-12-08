@@ -31,7 +31,7 @@ const StartJourney: FC<StartJourneyProps> = ({ slice }) => {
 
             {/* Description */}
             <div className="text-white text-base xl:text-sm my-5 md:text-lg w-[220px] font-medium leading-relaxed max-w-md">
-              <PrismicRichText field={slice.primary.description} /> 
+              <PrismicRichText field={slice.primary.description} />
             </div>
 
             {/* Get Started Button */}
@@ -50,6 +50,7 @@ const StartJourney: FC<StartJourneyProps> = ({ slice }) => {
             <div className="relative w-full aspect-square rounded-3xl overflow-hidden bg-white">
               <PrismicNextImage
                 field={slice.primary.bicycle}
+                fallbackAlt=""
                 className="w-full h-full object-cover"
               />
             </div>

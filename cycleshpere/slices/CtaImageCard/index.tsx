@@ -23,9 +23,9 @@ const CtaImageCard: FC<CtaImageCardProps> = ({ slice }) => {
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-16">
         {/* Header Section */}
         <div className="mb-8 md:mb-10 lg:mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 md:mb-6">
+          <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 md:mb-6">
             <PrismicRichText field={slice.primary.title} />
-          </h2>
+          </div>
           <div className="w-full md:w-[600px] lg:w-[650px] xl:w-[673px] h-auto xl:h-[72px] text-base md:text-[17px] xl:text-[18px] font-medium leading-[131%] text-black">
             <PrismicRichText field={slice.primary.description} />
           </div>
@@ -37,6 +37,7 @@ const CtaImageCard: FC<CtaImageCardProps> = ({ slice }) => {
           <div className="relative">
             <PrismicNextImage
               field={slice.primary.main_image}
+              fallbackAlt=""
               className="w-full h-auto rounded-2xl md:rounded-3xl grayscale"
             />
             {/* Cross Image Overlay */}
@@ -44,6 +45,7 @@ const CtaImageCard: FC<CtaImageCardProps> = ({ slice }) => {
               <div className="absolute top-[40%] left-[70%] md:top-[245px] md:left-[460px] xl:top-[245.43px] xl:left-[460.44px] w-[40px] h-[48px] md:w-[50px] md:h-[60px] xl:w-[50.04px] xl:h-[60.04px]">
                 <PrismicNextImage
                   field={slice.primary.cross_image}
+                  fallbackAlt=""
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -53,15 +55,16 @@ const CtaImageCard: FC<CtaImageCardProps> = ({ slice }) => {
           {/* Right: Content Section */}
           <div className="flex flex-col gap-4 md:gap-5 lg:gap-6">
             {/* Subtitle */}
-            <h3 className="w-full md:w-[400px] lg:w-[450px] xl:w-[480.33px] h-auto xl:h-[172.12px] text-2xl md:text-3xl lg:text-4xl xl:text-[46.03px] font-bold leading-tight md:leading-[45px] xl:leading-[52.04px] text-black">
+            <div className="w-full md:w-[400px] lg:w-[450px] xl:w-[480.33px] h-auto xl:h-[172.12px] text-2xl md:text-3xl lg:text-4xl xl:text-[46.03px] font-bold leading-tight md:leading-[45px] xl:leading-[52.04px] text-black">
               <PrismicRichText field={slice.primary.subtitle} />
-            </h3>
+            </div>
 
             {/* Bar Image */}
             {slice.primary.bar_image?.url && (
               <div className="w-16 h-1.5 md:w-20 md:h-2">
                 <PrismicNextImage
                   field={slice.primary.bar_image}
+                  fallbackAlt=""
                   className="w-full h-full object-cover"
                 />
               </div>

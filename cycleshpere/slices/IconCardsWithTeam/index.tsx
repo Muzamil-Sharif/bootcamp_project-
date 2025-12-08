@@ -24,9 +24,9 @@ const IconCardsWithTeam: FC<IconCardsWithTeamProps> = ({ slice }) => {
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-16">
         {/* Core Values Section */}
         <div className="text-center mb-12 md:mb-14 lg:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6">
+          <div className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6">
             <PrismicRichText field={slice.primary.section_title} />
-          </h2>
+          </div>
           <div className="text-base md:text-lg xl:text-xl text-white max-w-2xl lg:max-w-3xl mx-auto">
             <PrismicRichText field={slice.primary.section_intro} />
           </div>
@@ -38,14 +38,15 @@ const IconCardsWithTeam: FC<IconCardsWithTeamProps> = ({ slice }) => {
             <div
               key={index}
               className={`bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center text-center ${index === 0
-                  ? 'w-full md:w-[380px] lg:w-[400px] xl:w-[416px] h-auto md:h-[420px] xl:h-[452px]'
-                  : 'w-full md:w-[380px] lg:w-[400px] xl:w-[420px] h-auto md:h-[420px] xl:h-[452px]'
+                ? 'w-full md:w-[380px] lg:w-[400px] xl:w-[416px] h-auto md:h-[420px] xl:h-[452px]'
+                : 'w-full md:w-[380px] lg:w-[400px] xl:w-[420px] h-auto md:h-[420px] xl:h-[452px]'
                 }`}
             >
               {/* Icon with yellow-green circular background */}
               <div className="w-[140px] h-[140px] md:w-[150px] md:h-[150px] lg:w-[160px] lg:h-[160px] xl:w-[172px] xl:h-[172px] mt-4 md:mt-6 lg:mt-8 bg-[#D4FF70] rounded-full flex items-center justify-center mb-4 md:mb-6">
                 <PrismicNextImage
                   field={item.icon}
+                  fallbackAlt=""
                   className="w-[140px] h-[140px] md:w-[150px] md:h-[150px] lg:w-[160px] lg:h-[160px] xl:w-[172px] xl:h-[172px] object-contain"
                 />
               </div>
@@ -65,9 +66,9 @@ const IconCardsWithTeam: FC<IconCardsWithTeamProps> = ({ slice }) => {
 
         {/* Meet the Team Section */}
         <div className="mb-12 md:mb-14 lg:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6">
+          <div className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6">
             <PrismicRichText field={slice.primary.team_section_title} />
-          </h2>
+          </div>
           <div className="w-full md:w-[700px] lg:w-[800px] xl:w-[844px] h-auto xl:h-[62px] text-lg md:text-xl lg:text-[22px] xl:text-[24px] font-semibold leading-[131%] text-white">
             <PrismicRichText field={slice.primary.team_section_intro} />
           </div>
@@ -84,6 +85,7 @@ const IconCardsWithTeam: FC<IconCardsWithTeamProps> = ({ slice }) => {
               <div className="w-28 h-28 md:w-32 md:h-32 xl:w-36 xl:h-36 -mt-12 md:-mt-14 xl:-mt-16 rounded-full overflow-hidden mb-10 md:mb-12 xl:mb-14">
                 <PrismicNextImage
                   field={item.photo}
+                  fallbackAlt=""
                   className="w-full h-full object-cover"
                 />
               </div>

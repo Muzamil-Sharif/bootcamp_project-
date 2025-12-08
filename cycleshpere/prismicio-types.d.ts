@@ -371,6 +371,7 @@ export type NavbarDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | MembershipFormSlice
   | FeaturedArticlesGrid2Slice
   | RichContentSlice
   | BlogPostSlice
@@ -2660,6 +2661,202 @@ export type MediaHighlightCardSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *MembershipForm → Default → Primary → Personal Fields*
+ */
+export interface MembershipFormSliceDefaultPrimaryPersonalFieldsItem {
+  /**
+   * Field Label field in *MembershipForm → Default → Primary → Personal Fields*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.personal_fields[].label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Item in *MembershipForm → Default → Primary → Contact Fields*
+ */
+export interface MembershipFormSliceDefaultPrimaryContactFieldsItem {
+  /**
+   * Field Label field in *MembershipForm → Default → Primary → Contact Fields*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.contact_fields[].label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Item in *MembershipForm → Default → Primary → Emergency Contact Fields*
+ */
+export interface MembershipFormSliceDefaultPrimaryEmergencyContactFieldsItem {
+  /**
+   * Field Label field in *MembershipForm → Default → Primary → Emergency Contact Fields*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.emergency_contact_fields[].label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *MembershipForm → Default → Primary*
+ */
+export interface MembershipFormSliceDefaultPrimary {
+  /**
+   * Title field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Personal Fields field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.personal_fields[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  personal_fields: prismic.GroupField<
+    Simplify<MembershipFormSliceDefaultPrimaryPersonalFieldsItem>
+  >;
+
+  /**
+   * Contact Fields field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.contact_fields[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  contact_fields: prismic.GroupField<
+    Simplify<MembershipFormSliceDefaultPrimaryContactFieldsItem>
+  >;
+
+  /**
+   * Health Info Heading field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.health_info_heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  health_info_heading: prismic.RichTextField;
+
+  /**
+   * Health Question field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.health_question
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  health_question: prismic.KeyTextField;
+
+  /**
+   * Health Yes/No Option field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.health_yes_no
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  health_yes_no: prismic.SelectField<"Yes" | "No">;
+
+  /**
+   * Health Specify Field Label field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.health_specify_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  health_specify_label: prismic.KeyTextField;
+
+  /**
+   * Emergency Contact field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.emergency_contact
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  emergency_contact: prismic.KeyTextField;
+
+  /**
+   * Emergency Contact Fields field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.emergency_contact_fields[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  emergency_contact_fields: prismic.GroupField<
+    Simplify<MembershipFormSliceDefaultPrimaryEmergencyContactFieldsItem>
+  >;
+
+  /**
+   * Submit Button Text field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.submit_button_text
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  submit_button_text: prismic.KeyTextField;
+
+  /**
+   * Footnote field in *MembershipForm → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: membership_form.default.primary.footnote
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  footnote: prismic.RichTextField;
+}
+
+/**
+ * Default variation for MembershipForm Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Standard membership joining form with multiple field sections including personal, health, and emergency contact information.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MembershipFormSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MembershipFormSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *MembershipForm*
+ */
+type MembershipFormSliceVariation = MembershipFormSliceDefault;
+
+/**
+ * MembershipForm Shared Slice
+ *
+ * - **API ID**: `membership_form`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MembershipFormSlice = prismic.SharedSlice<
+  "membership_form",
+  MembershipFormSliceVariation
+>;
+
+/**
  * Item in *NewsFeedHighlighted → Default → Primary → News Items*
  */
 export interface NewsFeedHighlightedSliceDefaultPrimaryNewsItemsItem {
@@ -3859,6 +4056,13 @@ declare module "@prismicio/client" {
       MediaHighlightCardSliceImageWithHighlightedMessagePrimary,
       MediaHighlightCardSliceVariation,
       MediaHighlightCardSliceImageWithHighlightedMessage,
+      MembershipFormSlice,
+      MembershipFormSliceDefaultPrimaryPersonalFieldsItem,
+      MembershipFormSliceDefaultPrimaryContactFieldsItem,
+      MembershipFormSliceDefaultPrimaryEmergencyContactFieldsItem,
+      MembershipFormSliceDefaultPrimary,
+      MembershipFormSliceVariation,
+      MembershipFormSliceDefault,
       NewsFeedHighlightedSlice,
       NewsFeedHighlightedSliceDefaultPrimaryNewsItemsItem,
       NewsFeedHighlightedSliceDefaultPrimary,

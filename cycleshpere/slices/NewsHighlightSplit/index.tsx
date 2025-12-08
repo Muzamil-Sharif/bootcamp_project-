@@ -28,9 +28,10 @@ const NewsHighlightSplit: FC<NewsHighlightSplitProps> = ({ slice }) => {
             {/* Left Column: Trending News */}
             <div className="flex flex-col">
               {/* Section Title */}
-              <h2 className="text-2xl md:text-3xl xl:text-[32px] font-bold text-black mb-6 md:mb-8">
+              {/* Section Title */}
+              <div className="text-2xl md:text-3xl xl:text-[32px] font-bold text-black mb-6 md:mb-8">
                 <PrismicRichText field={slice.primary.news_section_title} />
-              </h2>
+              </div>
 
               {/* News Items List */}
               <div className="flex flex-col gap-6 md:gap-8">
@@ -43,6 +44,7 @@ const NewsHighlightSplit: FC<NewsHighlightSplitProps> = ({ slice }) => {
                     <div className="shrink-0 w-[180px] md:w-[200px] xl:w-[236px] h-[120px] md:h-[130px] xl:h-[150px] rounded-lg md:rounded-xl overflow-hidden">
                       <PrismicNextImage
                         field={item.thumbnail}
+                        fallbackAlt=""
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -76,8 +78,9 @@ const NewsHighlightSplit: FC<NewsHighlightSplitProps> = ({ slice }) => {
             {/* Right Column: Featured Article */}
             <div className="relative flex items-center xl:-my-8 xl:w-[570px] xl:mx-6 justify-center overflow-hidden rounded-none md:rounded-3xl h-[400px] md:h-[500px] lg:h-[600px] xl:h-[659px] xl:rounded-none">
               {/* Background Image */}
-              <PrismicNextImage 
+              <PrismicNextImage
                 field={slice.primary.featured_background}
+                fallbackAlt=""
                 className="absolute inset-0 w-full h-full object-cover"
               />
 

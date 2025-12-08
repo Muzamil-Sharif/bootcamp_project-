@@ -24,6 +24,7 @@ const HeroBanner: FC<HeroBannerProps> = ({ slice }) => {
       <div className="w-full h-full">
         <PrismicNextImage
           field={slice.primary.background_image}
+          fallbackAlt=""
           className="w-full h-full object-cover"
           priority
         />
@@ -33,12 +34,12 @@ const HeroBanner: FC<HeroBannerProps> = ({ slice }) => {
       <div className="absolute top-4 md:top-5 my-10 md:my-20 xl:my-60 left-0 px-4 md:px-0 z-10">
         {/* Yellow-Green Text Box */}
         <div className="w-full max-w-[90vw] md:w-[600px] lg:w-[700px] xl:w-[788px] h-auto md:h-[180px] lg:h-[200px] xl:h-[216px] bg-[#D4FF70] border-2 md:border-4 border-[#CCF07E] px-4 py-4 md:px-8 md:py-6 lg:px-10 lg:py-7 xl:px-12 xl:py-8">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#506335] uppercase leading-tight mb-1 md:mb-0">
+          <div className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#506335] uppercase leading-tight mb-1 md:mb-0">
             <PrismicRichText field={slice.primary.headline} />
-          </h1>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#506335] uppercase leading-tight">
+          </div>
+          <div className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#506335] uppercase leading-tight">
             <PrismicRichText field={slice.primary.headline2} />
-          </h2>
+          </div>
         </div>
       </div>
 

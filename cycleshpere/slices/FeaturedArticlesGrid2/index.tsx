@@ -148,7 +148,6 @@ const FeaturedArticlesGrid2: FC<FeaturedArticlesGrid2Props> = ({ slice }) => {
               </svg>
             </button>
           </div>
-        
       </div>
     </section>
   );

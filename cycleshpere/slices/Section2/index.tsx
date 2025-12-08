@@ -27,6 +27,7 @@ const Section2: FC<Section2Props> = ({ slice }) => {
         <div className="w-full max-w-sm lg:max-w-none lg:absolute lg:left-[-350px] lg:w-[700px] xl:w-[460px] xl:mx-80 lg:top-1/2 lg:-translate-y-1/2 z-0 shrink-0 mb-8 lg:mb-0">
           <PrismicNextImage
             field={slice.primary.backside_of_cycle}
+            fallbackAlt=""
             className="w-full h-auto object-contain"
           />
         </div>
@@ -50,6 +51,7 @@ const Section2: FC<Section2Props> = ({ slice }) => {
             <div className="w-3 h-3">
               <PrismicNextImage
                 field={slice.primary.north_east_arrow}
+                fallbackAlt=""
                 className="w-full h-full object-contain"
               />
             </div>
@@ -60,6 +62,7 @@ const Section2: FC<Section2Props> = ({ slice }) => {
         <div className="w-full max-w-sm lg:max-w-none lg:absolute lg:left-[1000px] lg:w-[700px] xl:w-[460px] xl:-mx-5 lg:top-1/2 lg:-translate-y-1/2 z-0 shrink-0 mt-8 lg:mt-0">
           <PrismicNextImage
             field={slice.primary.frontside_of_cycle}
+            fallbackAlt=""
             className="w-full h-auto object-contain"
           />
         </div>

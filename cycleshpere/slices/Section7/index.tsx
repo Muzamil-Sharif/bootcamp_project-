@@ -26,6 +26,7 @@ const Section7: FC<Section7Props> = ({ slice }) => {
           <div className="relative w-[468px] h-[530px] mx-auto md:mx-0 md:ml-[88px]">
             <PrismicNextImage
               field={slice.primary.cycle_image}
+              fallbackAlt=""
               className="w-full h-full object-cover rounded-[35px]"
             />
           </div>
@@ -36,7 +37,7 @@ const Section7: FC<Section7Props> = ({ slice }) => {
             </div>
             <div className="w-full md:w-[573px] xl:w-[425px] xl:h-[78px] text-base md:text-[18px] font-medium text-black leading-relaxed md:leading-[24px]">
               <PrismicRichText field={slice.primary.description} />
-          </div>
+            </div>
           </div>
         </div>
       </div>

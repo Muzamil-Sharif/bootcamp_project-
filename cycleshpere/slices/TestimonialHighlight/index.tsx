@@ -40,6 +40,7 @@ const TestimonialHighlight: FC<TestimonialHighlightProps> = ({ slice }) => {
                   <div className="w-[220px] md:w-[240px] lg:w-[255px] xl:w-[264.18px] h-[220px] md:h-[240px] lg:h-[255px] xl:h-[268.19px] rounded-full overflow-hidden mb-4 md:mb-6 grayscale">
                     <PrismicNextImage
                       field={slice.primary.profiles[0].avatar}
+                      fallbackAlt=""
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -62,6 +63,7 @@ const TestimonialHighlight: FC<TestimonialHighlightProps> = ({ slice }) => {
                 <div className="w-12 h-12 md:w-14 md:h-14 xl:w-16 xl:h-16 mb-4 md:mb-6 self-start">
                   <PrismicNextImage
                     field={slice.primary.starting_comma}
+                    fallbackAlt=""
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -75,6 +77,7 @@ const TestimonialHighlight: FC<TestimonialHighlightProps> = ({ slice }) => {
                 <div className="w-12 h-12 md:w-14 md:h-14 xl:w-16 xl:h-16 mt-3 md:mt-4 self-end">
                   <PrismicNextImage
                     field={slice.primary.ending_comma}
+                    fallbackAlt=""
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -88,6 +91,7 @@ const TestimonialHighlight: FC<TestimonialHighlightProps> = ({ slice }) => {
                   <div className="w-[220px] md:w-[240px] lg:w-[255px] xl:w-[264.18px] h-[220px] md:h-[240px] lg:h-[255px] xl:h-[268.19px] rounded-full overflow-hidden mb-4 md:mb-6 grayscale">
                     <PrismicNextImage
                       field={slice.primary.profiles[1].avatar}
+                      fallbackAlt=""
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -126,6 +130,7 @@ const TestimonialHighlight: FC<TestimonialHighlightProps> = ({ slice }) => {
               {slice.primary.north_east_arrow?.url && (
                 <PrismicNextImage
                   field={slice.primary.north_east_arrow}
+                  fallbackAlt=""
                   className="w-3 h-3 object-contain"
                 />
               )}

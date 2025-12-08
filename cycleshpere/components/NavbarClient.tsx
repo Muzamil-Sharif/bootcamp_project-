@@ -30,7 +30,7 @@ export default function NavbarClient({ data }: NavbarClientProps) {
 
     const floatingPages = ["/about", "/join"];
     const rectangularPages = ["/contact-us"];
-    const simplePages = ["/", "/blogs-page", "/events", "/news", "/products"];
+    const simplePages = ["/", "/blogs-page", "/general-news-page", "/community-form"];
 
     let navClass =
         "fixed z-50 top-0 w-full transition-all duration-300";
@@ -104,6 +104,7 @@ export default function NavbarClient({ data }: NavbarClientProps) {
                     <div className="w-8 h-8 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center transition hover:scale-105 shrink-0">
                         <PrismicNextImage
                             field={data.forward_arrow}
+                            fallbackAlt=""
                             className="md:w-10 md:h-10 sm:w-10 sm:h-10 rounded-full"
                         />
                     </div>

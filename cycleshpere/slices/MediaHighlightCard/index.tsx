@@ -25,9 +25,9 @@ const MediaHighlightCard: FC<MediaHighlightCardProps> = ({ slice }) => {
         {/* Header */}
         <div className="flex justify-between items-start mb-8">
           <div>
-            <h2 className="text-4xl font-bold text-black mb-2">
+            <div className="text-4xl font-bold text-black mb-2">
               <PrismicRichText field={slice.primary.highlight_title} />
-            </h2>
+            </div>
             <div className="text-black text-base max-w-md">
               <PrismicRichText field={slice.primary.highlight_description} />
             </div>
@@ -39,6 +39,7 @@ const MediaHighlightCard: FC<MediaHighlightCardProps> = ({ slice }) => {
             See all
             <PrismicNextImage
               field={slice.primary.north_east_arrow}
+              fallbackAlt=""
               className="w-3 h-3"
             />
           </PrismicNextLink>
@@ -50,6 +51,7 @@ const MediaHighlightCard: FC<MediaHighlightCardProps> = ({ slice }) => {
           <div className="relative w-full h-full min-h-[600px] lg:min-h-[1000px]">
             <PrismicNextImage
               field={slice.primary.media}
+              fallbackAlt=""
               className="w-full h-full object-cover"
             />
           </div>
@@ -72,9 +74,9 @@ const MediaHighlightCard: FC<MediaHighlightCardProps> = ({ slice }) => {
                     backgroundColor: slice.primary.highlight_box_color || "#C8FF00",
                   }}
                 >
-                  <h3 className="text-2xl w-[271px] h-[81px] font-bold xl:text-4xl text-black mb-3 leading-none">
+                  <div className="text-2xl w-[271px] h-[81px] font-bold xl:text-4xl text-black mb-3 leading-none">
                     <PrismicRichText field={slice.primary.box_heading} />
-                  </h3>
+                  </div>
                   <div className="text-base xl:font-medium xl:w-[240px] xl:h-[96px] xl:text-medium text-black xl:leading-tight">
                     <PrismicRichText field={slice.primary.box_description} />
                   </div>
@@ -85,6 +87,7 @@ const MediaHighlightCard: FC<MediaHighlightCardProps> = ({ slice }) => {
               <div className="relative h-[400px] md:h-full xl:w-[350px] min-h-[300px]">
                 <PrismicNextImage
                   field={slice.primary.cycle_image}
+                  fallbackAlt=""
                   className="w-full h-full object-cover rounded-3xl"
                 />
               </div>
@@ -102,16 +105,16 @@ const MediaHighlightCard: FC<MediaHighlightCardProps> = ({ slice }) => {
                     </div>
 
                     {/* Heading */}
-                    <h4 className="text-lg md:text-xl xl:text-3xl  font-bold text-black leading-none">
+                    <div className="text-lg md:text-xl xl:text-3xl  font-bold text-black leading-none">
                       <PrismicRichText field={item.heading} />
-                    </h4>
+                    </div>
 
                     {/* Description */}
                     <div className="text-sm xl:w-[280px] xl:font-medium xl:text-base text-black w-[220px] leading-relaxed">
                       <PrismicRichText field={item.description} />
                     </div>
                   </div>
-                  <PrismicNextImage field={item.line_vector} className="w-full" />
+                  <PrismicNextImage field={item.line_vector} fallbackAlt="" className="w-full" />
                 </div>
               ))}
             </div>
